@@ -1,0 +1,52 @@
+  <!--SECCION HABILIDADES-->
+  <section id="skills" class="skills-section">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="title-content mb-4">
+            <h2 class="section-title">Habilidades</h2>
+          </div>
+        </div>
+      </div>
+  
+        <!--Caja Izquierda-->
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 mb-3">
+            
+            <div class="skill-box" *ngFor="let skill of skillsLList">
+              <div class="skill-title d-flex justify-content-between align-items-center">
+                <p>{{skill.nombre}}</p>
+                <p>{{skill.porcentaje}}</p>
+              </div>
+  
+              <div class="progress">
+                <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}" id="html-menu">
+                </div>
+              </div>
+            </div>            
+  
+          </div> <!--Termina Columna-->
+  
+          <!--Caja Derecha-->
+          <div class="col-lg-6 mb-3">
+            
+            <div class="skill-box" *ngFor="let skill of skillsRList">
+              <div class="skill-title d-flex justify-content-between align-items-center">
+                <p>{{skill.nombre}}</p>
+                <p>{{skill.porcentaje}}</p>
+              </div>
+  
+              <div class="progress">
+                <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}" id="bs-menu">
+                </div>
+              </div>
+            </div>  
+            
+          </div> <!--Termina Columna-->
+  
+        </div> <!--Termina Fila-->
+        
+    </div> <!--Cierre Container-->
+
+  </section>

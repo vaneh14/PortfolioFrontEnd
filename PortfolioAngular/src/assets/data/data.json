@@ -1,0 +1,75 @@
+{
+    "imgLogo": "./assets/img/Logo Arg Prog.png",
+    "linkArgProg": "https://www.argentina.gob.ar/economia/conocimiento/argentina-programa",
+    "linkLinkedin": "https://www.linkedin.com/",
+    "linkGithub": "https://github.com/vaneh14",
+
+    "nombre": "VANESA HUARTE",
+
+    "presentacionInicio": "Me llamo ",
+    "nombreNegrita": "Vanesa.",
+    "presentacion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto iste doloribus perferendis unde laborum. Beatae ipsum ",
+    "presentacionNegrita": "maiores voluptatibus et alias.",
+    "imgPerfil": "./assets/img/Img Perfil.png",
+
+    "cursos": [{
+        "titulo": "Curso 1",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
+      },
+      {
+        "titulo": "Curso 2",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
+      }],
+      
+      "skillsL": [{
+        "nombre": "HTML",
+        "porcentaje": "40%"
+      },
+      {
+        "nombre": "CSS",
+        "porcentaje": "30%"
+      },
+      {
+        "nombre": "JavaScript",
+        "porcentaje": "10%"
+      }],
+      
+      "skillsR": [{
+        "nombre": "Bootstrap",
+        "porcentaje": "40%"
+      },
+      {
+        "nombre": "AngularJS",
+        "porcentaje": "20%"
+      },
+      {
+        "nombre": "MySQL",
+        "porcentaje": "10%"
+      }],
+
+      "trabajos": [{
+        "titulo": "Trabajo 2",
+        "fecha": "11 March 2020",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
+      },
+      {
+       "titulo": "Trabajo 1",
+        "fecha": "11 Enero 2022",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
+      }],
+
+      "proyectos": [{
+        "titulo": "Proyecto 1",
+        "imgProy": "assets/img/Img Proyecto.jpg"
+      },
+      {
+        "titulo": "Proyecto 2",
+        "imgProy":"assets/img/Img Proyecto.jpg"
+      },
+      {
+        "titulo": "Proyecto 3",
+        "imgProy":"assets/img/Img Proyecto.jpg"
+      }]
+}
+
+

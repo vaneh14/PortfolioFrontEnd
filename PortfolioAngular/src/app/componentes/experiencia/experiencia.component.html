@@ -1,0 +1,30 @@
+  <!--SECCION EXPERIENCIA-->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="section-title">Experiencia</h2>
+        </div>
+  
+        <!--Linea de tiempo-->
+        <div class="container block pt-4 ps-5"> 
+          <ul class="timeline-with-icons">
+  
+            <!--Trabajo-->
+            <li class="timeline-item mb-5" *ngFor="let trabajo of trabajosList">
+              <span class="timeline-icon">
+                <i class="bi bi-briefcase-fill"></i>
+              </span>
+              <h5 class="timeline-title fw-bold">{{trabajo.titulo}}</h5>
+              <p class="timeline-date text-muted mb-2 fw-bold">{{trabajo.fecha}}</p>
+              <p class="timeline-content text-muted"> 
+                {{trabajo.descripcion}}
+              </p>
+            </li>             
+          </ul> <!--Termina Linea de Tiempo-->
+        </div>
+
+      </div> <!--Termina Fila-->
+    </div> <!--Cierre Container-->
+  
+  </section>
