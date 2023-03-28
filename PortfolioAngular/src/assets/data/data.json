@@ -14,14 +14,18 @@
 
     "cursos": [{
         "titulo": "Curso 1",
+        "fechaInicio": "Junio 2022",
+        "fechaFin": "Agosto 2022",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
       },
       {
         "titulo": "Curso 2",
+        "fechaInicio": "Octubre 2022",
+        "fechaFin": "Mayo 2023",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
       }],
       
-      "skillsL": [{
+    "skillsL": [{
         "nombre": "HTML",
         "porcentaje": "40%"
       },
@@ -34,7 +38,7 @@
         "porcentaje": "10%"
       }],
       
-      "skillsR": [{
+    "skillsR": [{
         "nombre": "Bootstrap",
         "porcentaje": "40%"
       },
@@ -47,27 +51,35 @@
         "porcentaje": "10%"
       }],
 
-      "trabajos": [{
+    "trabajos": [{
         "titulo": "Trabajo 2",
-        "fecha": "11 March 2020",
+        "fechaInicio": "11 March 2022",
+        "fechaFin": "Actualidad",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
       },
       {
        "titulo": "Trabajo 1",
-        "fecha": "11 Enero 2022",
+        "fechaInicio": "11 Enero 2021",
+        "fechaFin": "Febrero 2022",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
       }],
 
-      "proyectos": [{
+    "proyectos": [{
         "titulo": "Proyecto 1",
+        "url_repositorio": "http://github.com",
+        "url_proyecto": "http://url.com",
         "imgProy": "assets/img/Img Proyecto.jpg"
       },
       {
         "titulo": "Proyecto 2",
+        "url_repositorio": "http://github.com",
+        "url_proyecto": "http://url.com",
         "imgProy":"assets/img/Img Proyecto.jpg"
       },
       {
         "titulo": "Proyecto 3",
+        "url_repositorio": "http://github.com",
+        "url_proyecto": "http://url.com",
         "imgProy":"assets/img/Img Proyecto.jpg"
       }]
 }

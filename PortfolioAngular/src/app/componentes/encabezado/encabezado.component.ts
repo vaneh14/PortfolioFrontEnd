@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
+
+
 @Component({
   selector: 'app-encabezado',
   templateUrl: './encabezado.component.html',
@@ -18,6 +20,7 @@ export class EncabezadoComponent {
       this.miPortfolio = data;
     });
   }
+  
   
 
 }

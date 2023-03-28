@@ -1,27 +1,45 @@
-# PortfolioAngular
+# :fa-briefcase: Portfolio Web 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Bienvenido al Repositorio Front End del mi Portfolio Web. El Repositorio Back End se encuentra [aquí](https://github.com/vaneh14/PortfolioBackEnd).
 
-## Development server
+Esta aplicación forma parte del Proyecto Integrador de la segunda etapa de **Argentina Programa, #Yo Programo** y consiste en el desarrollo de una aplicación web de arquitectura distribuida del tipo Single Page Application. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<img width="750" src="./src/assets/img/PortfolioWeb.jpg" alt="Foto de portfolio web">
 
-## Code scaffolding
+### Front End 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Creado con [Typescript](https://www.typescriptlang.org/) en [Angular CLI](https://github.com/angular/angular-cli) 15.2.1, estructura [HTML5](https://lenguajehtml.com/), estilos con [CSS3](https://lenguajecss.com/) y framework [Bootstrap](https://getbootstrap.com/) 5.2.3.
 
-## Build
+<div>
+   <img width="300" src="./src/assets/img/FrontEnd.png" alt="Logos Front End">   
+</div>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Back End
 
-## Running unit tests
+Creado con [Java](https://www.java.com/es/) en [Spring Boot](https://spring.io/) 3.0.5 conectada a una base de datos [MySQL](https://www.mysql.com/) 8.0.32.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<div>
+   <img width="150" src="./src/assets/img/BackEnd.png" alt="Logos Back End">
+</div>
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## :fa-pencil-square-o: Contenido 
 
-## Further help
+Al navegar por la página se pordrá acceder a las distintas secciones mediante accesos directos alojados en la barra de navegación o, simplemente, desplazándose hacia abajo con la rueda del mouse. En el portfolio se observarán mis datos personales y de contacto, habilidades y tecnologías adquiridas, estudios cursados, experiencia laboral y algunos proyectos realizados.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para poder editar el contenido de la página, se deberá iniciar sesión desde el ícono de login mediante el _usuario_ y _contraseña_ del administrador.
+
+## :fa-wrench: Instalación
+
+Para ver una vista previa del portfolio de manera local deberás:
+
+1. Clonar el repositorio: `https://github.com/vaneh14/PortfolioFrontEnd.git`
+2. Instalar las dependencias `npm install`
+3. Ejecutar en comando `ng serve` y abrir el navegador en el puerto `http://localhost:4200/`
+
+
+## :fa-smile-o: Sobre mí
+
+Hola, soy **Vanesa!** Me encuentro realizando mis primeros pasos en el mundo del desarrollo web. 
+
+

@@ -38,6 +38,19 @@ html{
 }
 
 
+/*--Botones de edicon--*/
+.edicion-icon i{
+    color: black;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.edicion-icon i:hover{
+    color: #D47AE8;
+}
+
+
 
 /*--BARRA DE MENU--*/
 .logotipo{
@@ -181,6 +194,8 @@ html{
     margin: auto;
     padding: 20px;
 }
+
+
 
 /*--Linea de tiempo--*/
 .block{

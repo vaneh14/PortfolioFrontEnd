@@ -9,6 +9,11 @@
           </div>
         </div>
       </div>
+
+      <!--Botón Agregar-->
+      <span class="edicion-icon d-flex justify-content-end">
+        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillAgregar"><i class="bi bi-plus-circle-fill"></i></a>
+      </span>
   
         <!--Caja Izquierda-->
         <div class="row g-4 justify-content-center">
@@ -24,6 +29,13 @@
                 <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}" id="html-menu">
                 </div>
               </div>
+
+              <!--Botones Editar y Eliminar-->
+              <span class="edicion-icon d-flex justify-content-end">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEditar"><i class="bi bi-pen-fill"></i></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEliminar"><i class="bi bi-trash3-fill"></i></a>
+              </span>
+
             </div>            
   
           </div> <!--Termina Columna-->
@@ -41,6 +53,13 @@
                 <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}" id="bs-menu">
                 </div>
               </div>
+
+              <!--Botones Editar y Eliminar-->
+              <span class="edicion-icon d-flex justify-content-end">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEditar"><i class="bi bi-pen-fill"></i></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEliminar"><i class="bi bi-trash3-fill"></i></a>
+              </span>
+
             </div>  
             
           </div> <!--Termina Columna-->
@@ -48,5 +67,103 @@
         </div> <!--Termina Fila-->
         
     </div> <!--Cierre Container-->
+
+
+    <!--MODAL AGREGAR-->
+    <div class="modal fade" id="ModalSkillAgregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Nueva Habilidad
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+  
+              <!--Formulario-->
+              <form>
+                <div class="row mb-3">
+                  <label for="inputTittle" class="col-form-label">
+                    Nombre de la Habilidad
+                  </label>
+                  <input type="text" class="form-control" id="titulo">                  
+                </div>
+  
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-form-label">
+                    Porcentaje
+                  </label>
+                  <input type="text" class="form-control" id="porcentaje">
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-9 offset">
+                    <button type="submit" class="btn btn-dark me-2" style="border-color: #D47AE8; background-color: #D47AE8;" name="button">
+                      Agregar
+                    </button> 
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                      Cancelar
+                    </button>                           
+                  </div>
+                </div>
+                
+              </form> <!--Cierre Formulario-->
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div> <!--Cierre Modal Agregar-->
+
+
+    <!--MODAL EDITAR-->
+    <div class="modal fade" id="ModalSkillEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Modificar Habilidad
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+  
+              <!--Formulario-->
+              <form>
+                <div class="row mb-3">
+                  <label for="inputTittle" class="col-form-label">
+                    Nombre de la Habilidad
+                  </label>
+                  <input type="text" class="form-control" id="titulo">                  
+                </div>
+  
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-form-label">
+                    Porcentaje
+                  </label>
+                  <input type="text" class="form-control" id="porcentaje">
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-9 offset">
+                    <button type="submit" class="btn btn-dark me-2" style="border-color: #D47AE8; background-color: #D47AE8;" name="button">
+                      Modificar
+                    </button> 
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                      Cancelar
+                    </button>                           
+                  </div>
+                </div>
+                
+              </form> <!--Cierre Formulario-->
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div> <!--Cierre Modal Editar-->
 
   </section>
