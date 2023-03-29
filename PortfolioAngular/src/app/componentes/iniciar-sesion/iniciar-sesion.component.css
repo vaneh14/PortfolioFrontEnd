@@ -1,0 +1,14 @@
+#login{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#login i{
+    font-size: 60px;
+}
+
+#login .btn:hover{
+    background-color: #b166c2 !important;
+    border-color: #b166c2 !important;
+}
+  

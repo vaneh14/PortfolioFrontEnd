@@ -1,0 +1,45 @@
+<section id="login" class="login-section">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+
+        <!--Formulario-->
+        <form [formGroup]="form" class="text-center" style="width: 18rem;">
+            <i class="bi bi-person-circle mb-4"></i>
+            <h1 class="h4 fw-200 mb-3">Iniciar sesión</h1>
+            
+            <!--Email-->
+            <div class="form-floating mb-3 text-secondary">
+                <input type="email" formControlName="email" 
+                [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': Email?.errors && Email?.touched}"
+                class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Correo electrónico</label>
+                <div *ngIf="Email?.errors && Email?.touched" style="font-size: 0.9rem;">
+                    <p *ngIf="Email?.hasError('required')" class="text-danger">
+                        El email es requerido
+                    </p>
+                    <p *ngIf="Email?.hasError('email')" class="text-danger">
+                        El formato del email debe ser válido
+                    </p>
+                </div>
+            </div>
+
+            <!--Contraseña-->
+            <div class="form-floating mb-3 text-secondary">
+                <input type="password" formControlName="password" 
+                [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': Password?.errors && Password?.touched}"
+                class="form-control" id="floatingPassword" placeholder="Contraseña">
+                <label for="floatingPassword">Contraseña</label>
+                <div *ngIf="Password?.errors && Password?.touched" style="font-size: 0.9rem;">
+                    <p *ngIf="Password?.hasError('required')" class="text-danger">
+                        La contraseña es requerida
+                    </p>
+                    <p *ngIf="Password?.errors?.['minLenght']" class="text-danger">
+                        La contraseña debe contener más de 8 caracteres
+                    </p>
+                </div>
+            </div>
+            
+            <button class="w-100 btn btn-lg btn-primary" style="border-color: #D47AE8; background-color: #D47AE8;" type="submit">Ingresar</button>
+        </form>
+            
+    </div> 
+</section>

@@ -30,6 +30,9 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ],
+            "allowedCommonJsDependencies":[
+              "t-writer.js"
             ]
           },
           "configurations": {
