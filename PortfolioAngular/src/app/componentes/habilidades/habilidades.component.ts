@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Habilidad } from 'src/app/modelo/Habilidad';
+import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -8,16 +9,25 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HabilidadesComponent {
   
-  skillsLList: any;
-  skillsRList: any;
+  skillList: any;
+
+  skillNueva: Habilidad = {nombre_habilidad: "", porcentaje: "", persona_id: 1}
+ 
+  constructor(private datosPortfolio:HabilidadService) { }
   
-  constructor(private datosPortfolio:PortfolioService) { }
-  
+  // Listar habilidades
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.skillsLList = data.skillsL;
-      this.skillsRList = data.skillsR;      
+    this.datosPortfolio.obtenerHabilidad().subscribe(data =>{
+      this.skillList = data;            
     });
+  }
+
+  // Nueva habilidad
+  agregarHabilidad(): void {
+    this.datosPortfolio.crearHabilidad(this.skillNueva).subscribe(data=>{
+      this.skillList.push(data);
+      alert("Habilidad agregada!");
+    })
   }
 
 }

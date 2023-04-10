@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
 // @ts-ignore
 import Typewriter from 't-writer.js';
 
@@ -11,14 +11,14 @@ import Typewriter from 't-writer.js';
 
 export class HomeComponent {
  
-  miPortfolio: any;
+  personaList: any;
 
-  constructor(private datosPortfolio:PortfolioService) {  }
+  constructor(private datosPortfolio:PersonaService) {  }
 
   ngOnInit(): void {
 
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.miPortfolio = data;
+      this.personaList = data;
     });
 
 

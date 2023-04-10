@@ -16,13 +16,15 @@
         "titulo": "Curso 1",
         "fechaInicio": "Junio 2022",
         "fechaFin": "Agosto 2022",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?",
+        "lenguaje": "lalalala"
       },
       {
         "titulo": "Curso 2",
         "fechaInicio": "Octubre 2022",
         "fechaFin": "Mayo 2023",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?"
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus adipisci, ad alias, voluptate pariatur officia repellendus repellat inventore fugit perferendis totam dolor voluptas et corrupti distinctio maxime corporis optio?",
+        "lenguaje": "lalalala"
       }],
       
     "skillsL": [{

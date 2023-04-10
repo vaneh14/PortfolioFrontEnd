@@ -91,6 +91,7 @@ html{
 
 #home h1{
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 #home span{
@@ -247,7 +248,7 @@ html{
 #skills .skill-title{
     font-weight: 300;
     margin-bottom: 0px;
-    margin-top: 15px;
+    margin-top: 10px;
     padding-top: 0px;
     padding-bottom: 0px;
 }

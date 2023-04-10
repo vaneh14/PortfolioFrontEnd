@@ -14,57 +14,36 @@
       <span class="edicion-icon d-flex justify-content-end">
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillAgregar"><i class="bi bi-plus-circle-fill"></i></a>
       </span>
-  
-        <!--Caja Izquierda-->
-        <div class="row g-4 justify-content-center">
-          <div class="col-lg-6 mb-3">
+
+
+      <!--CARD SKILL-->
+      <div class="row justify-content-around">
+        <div class="col-sm-12 col-md-6 mb-3" *ngFor="let skill of skillList" >
+          <div class="card mb-0 border-0 shadow-none">
             
-            <div class="skill-box" *ngFor="let skill of skillsLList">
-              <div class="skill-title d-flex justify-content-between align-items-center">
-                <p>{{skill.nombre}}</p>
-                <p>{{skill.porcentaje}}</p>
-              </div>
-  
-              <div class="progress">
-                <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}" id="html-menu">
+              <div class="skill-box col-12" >
+                <div class="skill-title d-flex justify-content-between align-items-center">
+                  <p>{{skill.nombre_habilidad}}</p>
+                  <p>{{skill.porcentaje}}</p>
                 </div>
-              </div>
-
-              <!--Botones Editar y Eliminar-->
-              <span class="edicion-icon d-flex justify-content-end">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEditar"><i class="bi bi-pen-fill"></i></a>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEliminar"><i class="bi bi-trash3-fill"></i></a>
-              </span>
-
-            </div>            
-  
-          </div> <!--Termina Columna-->
-  
-          <!--Caja Derecha-->
-          <div class="col-lg-6 mb-3">
-            
-            <div class="skill-box" *ngFor="let skill of skillsRList">
-              <div class="skill-title d-flex justify-content-between align-items-center">
-                <p>{{skill.nombre}}</p>
-                <p>{{skill.porcentaje}}</p>
-              </div>
-  
-              <div class="progress">
-                <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}" id="bs-menu">
+    
+                <div class="progress">
+                  <div class="progress-bar" style="background-color: #D47AE8; width: {{skill.porcentaje}}">
+                  </div>
                 </div>
-              </div>
-
-              <!--Botones Editar y Eliminar-->
-              <span class="edicion-icon d-flex justify-content-end">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEditar"><i class="bi bi-pen-fill"></i></a>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEliminar"><i class="bi bi-trash3-fill"></i></a>
-              </span>
-
-            </div>  
-            
-          </div> <!--Termina Columna-->
   
-        </div> <!--Termina Fila-->
+                <!--Botones Editar y Eliminar-->
+                <span class="edicion-icon d-flex justify-content-end mt-1">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEditar"><i class="bi bi-pen-fill"></i></a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#ModalSkillEliminar"><i class="bi bi-trash3-fill"></i></a>
+                </span>             
+              
+            </div>
+          </div>      
+        </div>
+  
+      </div> <!--Termina Fila-->             
+        
         
     </div> <!--Cierre Container-->
 
@@ -82,19 +61,19 @@
             <div class="container-fluid">
   
               <!--Formulario-->
-              <form>
+              <form (ngSubmit)="agregarHabilidad()" #formAgregar="ngForm">
                 <div class="row mb-3">
-                  <label for="inputTittle" class="col-form-label">
+                  <label for="nombre_habilidad" class="col-form-label">
                     Nombre de la Habilidad
                   </label>
-                  <input type="text" class="form-control" id="titulo">                  
+                  <input type="text" class="form-control" id="nombre_habilidad" name="nombre_habilidad" [(ngModel)]="skillNueva.nombre_habilidad">                  
                 </div>
   
                 <div class="row mb-3">
-                  <label for="inputDate" class="col-form-label">
+                  <label for="porcentaje" class="col-form-label">
                     Porcentaje
                   </label>
-                  <input type="text" class="form-control" id="porcentaje">
+                  <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skillNueva.porcentaje">
                 </div>
 
                 <div class="row mb-3">

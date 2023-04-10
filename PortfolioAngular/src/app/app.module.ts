@@ -15,7 +15,12 @@ import { HttpClientModule } from "@angular/common/http";
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EducacionService } from './servicios/educacion.service';
+import { PersonaService } from './servicios/persona.service';
+import { HabilidadService } from './servicios/habilidad.service';
+import { ExperienciaService } from './servicios/experiencia.service';
+import { ProyectoService } from './servicios/proyecto.service';
 
 @NgModule({
   declarations: [
@@ -35,9 +40,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    EducacionService,
+    PersonaService,
+    HabilidadService,
+    ExperienciaService,
+    ProyectoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
