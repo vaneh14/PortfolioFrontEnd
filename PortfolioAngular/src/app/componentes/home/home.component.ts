@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from 'src/app/modelo/Persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
 // @ts-ignore
 import Typewriter from 't-writer.js';
@@ -11,15 +12,17 @@ import Typewriter from 't-writer.js';
 
 export class HomeComponent {
  
-  personaList: any;
+  personasList: Array <Persona>;
 
-  constructor(private datosPortfolio:PersonaService) {  }
+  constructor(private persService:PersonaService) {
+
+    this.personasList = new Array <Persona>();
+
+  }
 
   ngOnInit(): void {
 
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.personaList = data;
-    });
+    this.obtenerPersonas();
 
 
     // EFECTO TYPEWRITER //
@@ -35,6 +38,14 @@ export class HomeComponent {
       .type(' Full Stack Developer Jr ')
       .rest(600)
       .start()
+  }
+
+
+  // Mostrar personas //
+  obtenerPersonas(): void {
+    this.persService.getPersonas().subscribe(data =>{
+      this.personasList = data;      
+    });
   }
 
 }

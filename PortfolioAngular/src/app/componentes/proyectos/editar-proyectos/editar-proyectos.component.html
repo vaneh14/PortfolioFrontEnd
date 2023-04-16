@@ -1,0 +1,68 @@
+<section id="editarProyecto" class="edit-section">
+
+    <!--Boton Volver Atras-->
+    <div class="position-absolute top-0 start-0">
+        <a class="nav-link" routerLink="/portfolio" id="volverAtras">
+            <i class="bi bi-arrow-left-circle"></i>            
+        </a>
+    </div>
+    
+    <div class="container d-flex row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-8 mb-3">
+            <div class="card">
+                <div class="card-body px-4 py-4">
+
+                    <!--Formulario-->
+                    <form class="row g-3" role="form" #formEditarProyecto="ngForm">
+                        
+                        <div class="form-group col-12">
+                            <label for="nombre_proyecto" class="col-form-label fw-bold">
+                                Nombre del proyecto
+                            </label>
+                            <input type="text" class="form-control" id="nombre_proyecto" name="nombre_proyecto" [(ngModel)]="proyectoActual.nombre_proyecto">                  
+                        </div>
+    
+                        <div class="form-group col-12">
+                            <label for="url_repositorio" class="col-form-label fw-bold">
+                                Url del repositorio
+                            </label>
+                            <input type="text" class="form-control" id="url_repositorio" name="url_repositorio" [(ngModel)]="proyectoActual.url_repositorio">
+                        </div>
+
+                        <div class="form-group col-12">
+                            <label for="url_proyecto" class="col-form-label fw-bold">
+                                Url del proyecto
+                            </label>
+                            <input type="text" class="form-control" id="url_proyecto" name="url_proyecto" [(ngModel)]="proyectoActual.url_proyecto">
+                        </div>
+    
+                        <!--Boton Agregar-->
+                        <div class="col-9 offset" *ngIf="!proyectoActual.id else elseBlock">
+                            <button (click)="agregarProyecto()" type="button" class="btn btn-dark me-2" name="addButton" id="editButton">
+                                Agregar
+                            </button>
+                            <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
+                                Cancelar
+                            </button>
+                        </div>
+
+                        <!--Boton Modificar-->
+                        <ng-template #elseBlock>
+                            <div class="col-9 offset">
+                                <button (click)="editarProyecto(proyectoActual)" type="submit" class="btn btn-dark me-2" name="addButton" id="editButton">
+                                    Modificar
+                                </button>
+                                <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </ng-template>         
+                  
+                    </form> <!--Cierre Formulario-->
+
+                </div>
+            </div>
+        </div>
+    </div> <!--Cierre Container-->
+
+</section>

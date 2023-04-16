@@ -3,12 +3,17 @@
     font-family: 'Poppins', sans-serif; 
 }
 
-#login i{
-    font-size: 60px;
+#iconoLogin{
+    font-size: 60px ;
 }
 
 #login .btn:hover{
     background-color: #b166c2 !important;
     border-color: #b166c2 !important;
+}
+
+#volverAtras{
+    font-size: 30px;
+    padding: 15px 20px;
 }
   

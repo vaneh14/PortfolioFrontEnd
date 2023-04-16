@@ -21,6 +21,12 @@ import { PersonaService } from './servicios/persona.service';
 import { HabilidadService } from './servicios/habilidad.service';
 import { ExperienciaService } from './servicios/experiencia.service';
 import { ProyectoService } from './servicios/proyecto.service';
+import { EditarEducacionComponent } from './componentes/educacion/editar-educacion/editar-educacion.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditarExperienciaComponent } from './componentes/experiencia/editar-experiencia/editar-experiencia.component';
+import { EditarProyectosComponent } from './componentes/proyectos/editar-proyectos/editar-proyectos.component';
+import { EditarHabilidadesComponent } from './componentes/habilidades/editar-habilidades/editar-habilidades.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +40,24 @@ import { ProyectoService } from './servicios/proyecto.service';
     ProyectosComponent,
     FooterComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    EditarEducacionComponent,
+    EditarExperienciaComponent,
+    EditarProyectosComponent,
+    EditarHabilidadesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: "toast-center-center",
+      timeOut:3000,
+      closeButton: true
+    })
   ],
   providers: [
     EducacionService,

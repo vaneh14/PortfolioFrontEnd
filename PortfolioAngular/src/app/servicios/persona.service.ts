@@ -10,9 +10,11 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
+  // API Back End //
   Url = "http://localhost:8080/api/persona";
 
-  obtenerDatos(): Observable <any>{
+  // Mostrar personas //
+  getPersonas(): Observable <any>{
     return this.http.get<Persona[]>(this.Url);
   }
 }

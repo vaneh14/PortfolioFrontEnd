@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 import { Educacion } from 'src/app/modelo/Educacion';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -12,47 +13,36 @@ import { Educacion } from 'src/app/modelo/Educacion';
 export class EducacionComponent {
   
   cursosList: Array <Educacion>;
-
-  cursoNuevo: Educacion = {
-    nombre_curso: "",
-    fecha_inicio: "",
-    fecha_fin: "",
-    descripcion: "",
-    lenguaje: "",
-    url_curso: "",
-    persona_id: 1 };
-  
-  constructor(private eduService:EducacionService) {
+ 
+  id: any;
+ 
+  constructor(private eduService:EducacionService, private toastr: ToastrService) {
+    
     this.cursosList = new Array <Educacion>();
+    
    }  
   
   ngOnInit(): void {
-    // Listar cursos
-    this.eduService.obtenerEducacion().subscribe(data =>{
+    
+    this.obtenerCursos();
+    
+  }
+
+
+  // Mostrar cursos //
+  obtenerCursos(): void {
+    this.eduService.getEducacion().subscribe(data =>{
       this.cursosList = data;
-    });
-  }
-
-  // Nuevo curso
-  agregarCurso(): void {    
-    this.eduService.crearEducacion(this.cursoNuevo).subscribe(data =>{
-      this.cursosList.push(data);
-      alert("Agregado con éxito!");      
-    });
-  }
-
-  // Editar curso
-  modificarCurso(curso: Educacion): void {
-    this.eduService.modificarEducacion(curso).subscribe(data =>{
-      this.cursosList.push(curso);
-    });
-  }
-  
-  // Borrar curso
-  borrarCurso(id: number): void {
-    this.eduService.borrarEducacion(id).subscribe(data =>{
       
-      alert("Borrado con éxito!");
+    });
+  }
+
+  
+  // Borrar curso //
+  borrarCurso(id: any): void {
+    this.eduService.deleteEducacion(id).subscribe(data =>{
+      this.toastr.success('Borrado con éxito!');
+      this.obtenerCursos();      
     });    
   }
  

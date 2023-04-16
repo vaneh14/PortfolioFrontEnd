@@ -10,9 +10,31 @@ export class ProyectoService {
 
   constructor(private http:HttpClient) { }
 
+  // API Back End //
   Url = "http://localhost:8080/api/proyecto";
 
-  obtenerDatos(): Observable <any>{
+  // Crear nuevo proyecto //
+  createProyecto(proyecto: Proyecto): Observable <any> {
+    return this.http.post<Proyecto>(`${this.Url}/new`, proyecto);
+  }
+
+  // Mostrar proyectos //
+  getProyecto(): Observable <any> {
     return this.http.get<Proyecto[]>(this.Url);
   }
+
+  // Editar proyecto //
+  getProyectoId(id: any): Observable <Proyecto> {
+    return this.http.get<Proyecto>(`${this.Url}/edit/${id}`);
+  }
+
+  updateProyecto(proyecto: Proyecto): Observable <any> {
+    return this.http.put(`${this.Url}/edit/${proyecto.id}`, proyecto);
+  }
+
+  // Borrar proyecto //
+  deleteProyecto(id: any): Observable <any> {
+    return this.http.delete(`${this.Url}/delete/${id}`);
+  }
+
 }

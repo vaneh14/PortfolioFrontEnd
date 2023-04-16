@@ -10,26 +10,28 @@
         <div class="container block pt-4 ps-5"> 
           <!--Botón Agregar-->
           <span class="edicion-icon d-flex justify-content-end">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#ModalWorkAgregar"><i class="bi bi-plus-circle-fill"></i></a>
+            <a class="nav-link" routerLink="/agregar-experiencia"><i class="bi bi-plus-circle-fill"></i></a>
           </span>
           
           <ul class="timeline-with-icons">
   
             <!--Trabajo-->
-            <li class="timeline-item mb-5" *ngFor="let trabajo of trabajoList">
+            <li class="timeline-item mb-5" *ngFor="let trabajo of trabajosList">
               <span class="timeline-icon mt-4">
                 <i class="bi bi-briefcase-fill"></i>
               </span>
+
               <!--Botones Editar y Eliminar-->
               <span class="edicion-icon d-flex justify-content-end">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalWorkEditar"><i class="bi bi-pen-fill"></i></a>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalWorkEliminar"><i class="bi bi-trash3-fill"></i></a>
+                <a href="#" routerLink="/editar-experiencia/{{trabajo.id}}"><i class="bi bi-pen-fill"></i></a>
+                <a (click)="borrarTrabajo(trabajo.id)" href="#"><i class="bi bi-trash3-fill"></i></a>
               </span>
-              <h5 class="timeline-title fw-bold">{{trabajo.nombre_puesto}}</h5>
-              <h6>{{trabajo.nombre_empresa}}</h6>
-              <p class="timeline-date text-muted mb-2 fw-bold">{{trabajo.fecha_inicio}} - {{trabajo.fecha_fin}}</p>
+
+              <h5 class="timeline-title fw-bold">{{trabajo?.nombre_puesto}}</h5>
+              <h6>{{trabajo?.nombre_empresa}}</h6>
+              <p class="timeline-date text-muted mb-2 fw-bold">{{trabajo?.fecha_inicio}} - {{trabajo?.fecha_fin}}</p>
               <p class="timeline-content text-muted"> 
-                {{trabajo.descripcion}}
+                {{trabajo?.descripcion}}                
               </p> 
             </li>             
           </ul> <!--Termina Linea de Tiempo-->
@@ -37,147 +39,5 @@
 
       </div> <!--Termina Fila-->
     </div> <!--Cierre Container-->
-
-
-    <!--MODAL AGREGAR-->
-    <div class="modal fade" id="ModalWorkAgregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Nueva Experiencia Laboral
-            </h5>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-  
-              <!--Formulario-->
-              <form>
-                <div class="row mb-3">
-                  <label for="inputTittle" class="col-form-label">
-                    Nombre del puesto
-                  </label>
-                  <input type="text" class="form-control" id="puesto">                  
-                </div>
-
-                <div class="row mb-3">
-                  <label for="inputTittle" class="col-form-label">
-                    Nombre de la empresa
-                  </label>
-                  <input type="text" class="form-control" id="empresa">                  
-                </div>
-  
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-form-label">
-                    Fecha de inicio
-                  </label>
-                  <input type="text" class="form-control" id="fecha">
-                </div>
-
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-form-label">
-                    Fecha de fin
-                  </label>
-                  <input type="text" class="form-control" id="fecha">
-                </div>
-
-
-                <div class="row mb-3">
-                  <label for="inputDescription" class="col-form-label">
-                    Descripción del puesto
-                  </label>
-                  <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
-                </div>
-  
-                <div class="row mb-3">
-                  <div class="col-9 offset">
-                    <button type="submit" class="btn btn-dark me-2" style="border-color: #D47AE8; background-color: #D47AE8;" name="button">
-                      Agregar
-                    </button> 
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                      Cancelar
-                    </button>                           
-                  </div>
-                </div>
-                
-              </form> <!--Cierre Formulario-->
-  
-            </div>
-          </div>
-  
-        </div>
-      </div>
-    </div> <!--Cierre Modal Agregar-->
-
-
-    <!--MODAL EDITAR-->
-    <div class="modal fade" id="ModalWorkEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Modificar Experiencia Laboral
-            </h5>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-  
-              <!--Formulario-->
-              <form>
-                <div class="row mb-3">
-                  <label for="inputTittle" class="col-form-label">
-                    Nombre del puesto
-                  </label>
-                  <input type="text" class="form-control" id="puesto">                  
-                </div>
-
-                <div class="row mb-3">
-                  <label for="inputTittle" class="col-form-label">
-                    Nombre de la empresa
-                  </label>
-                  <input type="text" class="form-control" id="empresa">                  
-                </div>
-  
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-form-label">
-                    Fecha de inicio
-                  </label>
-                  <input type="text" class="form-control" id="fecha">
-                </div>
-
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-form-label">
-                    Fecha de fin
-                  </label>
-                  <input type="text" class="form-control" id="fecha">
-                </div>
-
-
-                <div class="row mb-3">
-                  <label for="inputDescription" class="col-form-label">
-                    Descripción del puesto
-                  </label>
-                  <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
-                </div>
-  
-                <div class="row mb-3">
-                  <div class="col-9 offset">
-                    <button type="submit" class="btn btn-dark me-2" style="border-color: #D47AE8; background-color: #D47AE8;" name="button">
-                      Modificar
-                    </button> 
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                      Cancelar
-                    </button>                           
-                  </div>
-                </div>
-                
-              </form> <!--Cierre Formulario-->
-  
-            </div>
-          </div>
-  
-        </div>
-      </div>
-    </div> <!--Cierre Modal Editar-->
   
   </section>

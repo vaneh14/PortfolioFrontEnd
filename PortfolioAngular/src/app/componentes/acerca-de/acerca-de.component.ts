@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from 'src/app/modelo/Persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
@@ -9,13 +10,23 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 
 export class AcercaDeComponent {
   
-  personaList: any;
+  personasList: Array <Persona>;
   
-  constructor(private datosPortfolio:PersonaService) { }
+  constructor(private persService:PersonaService) {
+
+    this.personasList = new Array <Persona>();
+
+  }
   
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.personaList = data;
+    this.obtenerPersonas();
+  }
+
+
+  // Mostrar personas //
+  obtenerPersonas(): void {
+    this.persService.getPersonas().subscribe(data =>{
+      this.personasList = data;      
     });
   }
 

@@ -1,0 +1,61 @@
+<section id="editarHabilidad" class="edit-section">
+
+    <!--Boton Volver Atras-->
+    <div class="position-absolute top-0 start-0">
+        <a class="nav-link" routerLink="/portfolio" id="volverAtras">
+            <i class="bi bi-arrow-left-circle"></i>            
+        </a>
+    </div>
+    
+    <div class="container d-flex row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-8 mb-3">
+            <div class="card">
+                <div class="card-body px-4 py-4">
+
+                    <!--Formulario-->                
+                    <form class="row g-3" role="form" #formEditarCurso="ngForm">
+
+                        <div class="form-group col-12">
+                            <label for="nombre_habilidad" class="col-form-label fw-bold">
+                                Nombre de la habilidad
+                            </label>
+                            <input type="text" class="form-control" id="nombre_habilidad" name="nombre_habilidad" [(ngModel)]="skillActual.nombre_habilidad">                  
+                        </div>
+                        
+                        <div class="form-group col-12">
+                            <label for="porcentaje" class="col-form-label fw-bold">
+                                Porcentaje
+                            </label>
+                            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skillActual.porcentaje">
+                        </div>
+    
+                        <!--Boton Agregar-->
+                        <div class="col-9 offset" *ngIf="!skillActual.id else elseBlock">
+                            <button (click)="agregarHabilidad()" type="button" class="btn btn-dark me-2" name="addButton" id="editButton">
+                                Agregar
+                            </button>
+                            <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
+                                Cancelar
+                            </button>
+                        </div>
+
+                        <!--Boton Modificar-->
+                        <ng-template #elseBlock>
+                            <div class="col-9 offset">
+                                <button (click)="editarHabilidad(skillActual)" type="submit" class="btn btn-dark me-2" name="addButton" id="editButton">
+                                    Modificar
+                                </button>
+                                <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </ng-template>         
+                  
+                    </form> <!--Cierre Formulario-->
+
+                </div>
+            </div>
+        </div>
+    </div> <!--Cierre Container-->
+
+</section> 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Habilidad } from 'src/app/modelo/Habilidad';
 import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
@@ -7,27 +8,38 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
   templateUrl: './habilidades.component.html',
   styleUrls: ['./habilidades.component.css']
 })
+
 export class HabilidadesComponent {
   
-  skillList: any;
+  skillsList: Array <Habilidad>;
 
-  skillNueva: Habilidad = {nombre_habilidad: "", porcentaje: "", persona_id: 1}
+  id!: any;
  
-  constructor(private datosPortfolio:HabilidadService) { }
+  constructor(private skillService: HabilidadService, private toastr: ToastrService) { 
+
+    this.skillsList = new Array <Habilidad>();
+
+  }
   
-  // Listar habilidades
   ngOnInit(): void {
-    this.datosPortfolio.obtenerHabilidad().subscribe(data =>{
-      this.skillList = data;            
+    this.obtenerHabilidades();
+  }
+
+
+  // Mostrar habilidades //
+  obtenerHabilidades(): void {
+    this.skillService.getHabilidad().subscribe(data =>{
+      this.skillsList = data;
     });
   }
 
-  // Nueva habilidad
-  agregarHabilidad(): void {
-    this.datosPortfolio.crearHabilidad(this.skillNueva).subscribe(data=>{
-      this.skillList.push(data);
-      alert("Habilidad agregada!");
-    })
+  
+  // Borrar habilidad
+  borrarHabilidad(id: number): void {
+    this.skillService.deleteHabilidad(id).subscribe(data =>{
+      this.toastr.success('Borrado con éxito!');
+      this.obtenerHabilidades();      
+    });    
   }
-
+ 
 }

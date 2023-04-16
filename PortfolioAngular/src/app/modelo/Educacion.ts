@@ -1,7 +1,7 @@
 export class Educacion {
 
     //Atributos
-    id?: number;
+    id?: any;
     nombre_curso: String;
     fecha_inicio: String;
     fecha_fin: String;

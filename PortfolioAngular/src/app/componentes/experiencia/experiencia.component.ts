@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Experiencia } from 'src/app/modelo/Experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -9,14 +10,36 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ExperienciaComponent {
   
-  trabajoList: any;
+  trabajosList: Array <Experiencia>;
+   
+  id!: any;
   
-  constructor(private datosPortfolio:ExperienciaService) { }
+  constructor(private workService: ExperienciaService, private toastr: ToastrService) {
+
+    this.trabajosList = new Array <Experiencia>();
+
+  }
   
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.trabajoList = data;
+
+    this.obtenerTrabajos();
+
+  }
+
+
+  // Mostrar trabajos //
+  obtenerTrabajos(): void {
+    this.workService.getExperiencia().subscribe(data =>{
+      this.trabajosList = data;
     });
+  }
+
+    
+  // Borrar trabajo //
+  borrarTrabajo(id: any): void {
+    this.workService.deleteExperiencia(id).subscribe(data =>{
+      this.toastr.success('Borrado con éxito!');      
+    });    
   }
 
 }

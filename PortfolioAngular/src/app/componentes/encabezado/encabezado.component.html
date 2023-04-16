@@ -15,7 +15,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse" id="navbarNav" *ngFor="let persona of personaList">
+        <div class="collapse navbar-collapse" id="navbarNav" *ngFor="let persona of personasList">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a (click)="toHome()" routerLinkActive="active" class="nav-link active fw-bold" aria-current="page" style="color: #D47AE8; cursor: pointer;">Home</a>
@@ -41,10 +41,10 @@
         <!--Iconos Redes Sociales-->
           <ul class="navbar-nav flex-row flex-wrap text-center">
             <li class="nav-item col-4 col-lg-auto" id="iconos-barra">
-              <a class="nav-link" href={{persona.url_linkedin}} target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+              <a class="nav-link" href={{persona?.url_linkedin}} target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
             </li>
             <li class="nav-item col-4 col-lg-auto">
-              <a class="nav-link" href={{persona.url_github}} target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+              <a class="nav-link" href={{persona?.url_github}} target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
             </li>
             <li class="nav-item col-4 col-lg-auto">
               <a class="nav-link" routerLink="/iniciar-sesion"><i class="bi bi-person-circle"></i></a>          

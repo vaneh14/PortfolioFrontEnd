@@ -1,9 +1,17 @@
 <section id="login" class="login-section">
+
+    <!--Boton Volver Atras-->
+    <div class="position-absolute top-0 start-0">
+        <a class="nav-link" routerLink="/portfolio" id="volverAtras">
+            <i class="bi bi-arrow-left-circle"></i>            
+        </a>
+    </div>
+
     <div class="d-flex justify-content-center align-items-center vh-100">
 
-        <!--Formulario-->
+        <!--Formulario INICIAR SESION-->
         <form [formGroup]="form" class="text-center" style="width: 18rem;">
-            <i class="bi bi-person-circle mb-4"></i>
+            <i class="bi bi-person-circle mb-4" id="iconoLogin"></i>
             <h1 class="h4 fw-200 mb-3">Iniciar sesión</h1>
             
             <!--Email-->
@@ -38,7 +46,7 @@
                 </div>
             </div>
             
-            <button class="w-100 btn btn-lg btn-primary" style="border-color: #D47AE8; background-color: #D47AE8;" type="submit">Ingresar</button>
+            <button class="w-100 btn btn-lg btn-primary" style="border-color: #D47AE8; background-color: #D47AE8;" type="submit" id="botonIngresar">Ingresar</button>
         </form>
             
     </div> 

@@ -11,27 +11,31 @@ export class EducacionService {
 
   constructor(private http:HttpClient) { }
 
-  // API Back End
+  // API Back End //
   Url = "http://localhost:8080/api/educacion";
 
-  // Crear nuevo curso
-  crearEducacion(curso: Educacion): Observable <any> {
-    return this.http.post<Educacion>(this.Url + "/" + "new", curso);
+  // Crear nuevo curso //
+  createEducacion(curso: Educacion): Observable <any> {
+    return this.http.post<Educacion>(`${this.Url}/new`, curso);
   }
 
-  // Listar cursos
-  obtenerEducacion(): Observable <any> {
+  // Mostrar cursos //
+  getEducacion(): Observable <any> {
     return this.http.get<Educacion[]>(this.Url);
   }
 
-  // Editar curso
-  modificarEducacion(curso: Educacion): Observable <void> {
-    return this.http.put<void>(this.Url + "/" + "update", curso);
+  // Editar curso //
+  getEducacionId(id: any): Observable <Educacion> {
+    return this.http.get<Educacion>(`${this.Url}/edit/${id}`);
   }
 
-  // Borrar curso
-  borrarEducacion(id: number): Observable <void> {
-    return this.http.delete<void>(this.Url + "/" + "delete/${id}");
+  updateEducacion(curso: Educacion): Observable <any> {
+    return this.http.put(`${this.Url}/edit/${curso.id}`, curso);
+  }
+
+  // Borrar curso //
+  deleteEducacion(id: any): Observable <any> {
+    return this.http.delete(`${this.Url}/delete/${id}`);
   }
 
 }
