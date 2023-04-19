@@ -6,11 +6,15 @@ import { EditarEducacionComponent } from './componentes/educacion/editar-educaci
 import { EditarExperienciaComponent } from './componentes/experiencia/editar-experiencia/editar-experiencia.component';
 import { EditarProyectosComponent } from './componentes/proyectos/editar-proyectos/editar-proyectos.component';
 import { EditarHabilidadesComponent } from './componentes/habilidades/editar-habilidades/editar-habilidades.component';
+import { EditarPersonaComponent } from './componentes/acerca-de/editar-persona/editar-persona.component';
 
 const routes: Routes = [
   {path: "portfolio", component: PortfolioComponent},
   {path: "iniciar-sesion", component: IniciarSesionComponent},
   {path: "", redirectTo:"portfolio", pathMatch:"full"},  
+
+  {path: "editar-persona/:id", component: EditarPersonaComponent},
+  {path: "agregar-persona", component: EditarPersonaComponent},
 
   {path: "editar-educacion/:id", component: EditarEducacionComponent},
   {path: "agregar-educacion", component: EditarEducacionComponent},

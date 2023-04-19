@@ -16,9 +16,8 @@
             
             <!--Email-->
             <div class="form-floating mb-3 text-secondary">
-                <input type="email" formControlName="email" 
-                [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': Email?.errors && Email?.touched}"
-                class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" formControlName="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': Email?.errors && Email?.touched}">
                 <label for="floatingInput">Correo electrónico</label>
                 <div *ngIf="Email?.errors && Email?.touched" style="font-size: 0.9rem;">
                     <p *ngIf="Email?.hasError('required')" class="text-danger">
@@ -32,9 +31,8 @@
 
             <!--Contraseña-->
             <div class="form-floating mb-3 text-secondary">
-                <input type="password" formControlName="password" 
-                [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': Password?.errors && Password?.touched}"
-                class="form-control" id="floatingPassword" placeholder="Contraseña">
+                <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Contraseña"
+                [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': Password?.errors && Password?.touched}">
                 <label for="floatingPassword">Contraseña</label>
                 <div *ngIf="Password?.errors && Password?.touched" style="font-size: 0.9rem;">
                     <p *ngIf="Password?.hasError('required')" class="text-danger">
@@ -46,8 +44,13 @@
                 </div>
             </div>
             
-            <button class="w-100 btn btn-lg btn-primary" style="border-color: #D47AE8; background-color: #D47AE8;" type="submit" id="botonIngresar">Ingresar</button>
-        </form>
-            
+            <!--Boton Ingresar-->
+            <button class="w-100 btn btn-lg btn-primary" style="border-color: #D47AE8; background-color: #D47AE8;" type="submit" name="ingresarButton" id="ingresarButton">
+                Ingresar
+            </button>
+
+        </form> <!--Termina Formulario-->
+
     </div> 
+
 </section>

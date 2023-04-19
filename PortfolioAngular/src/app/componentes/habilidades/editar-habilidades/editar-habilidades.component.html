@@ -9,7 +9,7 @@
     
     <div class="container d-flex row justify-content-center align-items-center">
         <div class="col-sm-12 col-md-8 mb-3">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-body px-4 py-4">
 
                     <!--Formulario-->                
@@ -19,19 +19,19 @@
                             <label for="nombre_habilidad" class="col-form-label fw-bold">
                                 Nombre de la habilidad
                             </label>
-                            <input type="text" class="form-control" id="nombre_habilidad" name="nombre_habilidad" [(ngModel)]="skillActual.nombre_habilidad">                  
+                            <input type="text" class="form-control" id="nombre_habilidad" name="nombre_habilidad" [(ngModel)]="skillActual.nombre_habilidad" placeholder="Nombre">                  
                         </div>
                         
                         <div class="form-group col-12">
                             <label for="porcentaje" class="col-form-label fw-bold">
                                 Porcentaje
                             </label>
-                            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skillActual.porcentaje">
+                            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skillActual.porcentaje" placeholder="Porcentaje de la habilidad adquirido">
                         </div>
     
                         <!--Boton Agregar-->
-                        <div class="col-9 offset" *ngIf="!skillActual.id else elseBlock">
-                            <button (click)="agregarHabilidad()" type="button" class="btn btn-dark me-2" name="addButton" id="editButton">
+                        <div class="col-12 d-flex justify-content-center" *ngIf="!skillActual.id else elseBlock">
+                            <button (click)="agregarHabilidad()" type="button" class="btn btn-dark me-2" name="addButton" id="addButton">
                                 Agregar
                             </button>
                             <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
@@ -41,8 +41,8 @@
 
                         <!--Boton Modificar-->
                         <ng-template #elseBlock>
-                            <div class="col-9 offset">
-                                <button (click)="editarHabilidad(skillActual)" type="submit" class="btn btn-dark me-2" name="addButton" id="editButton">
+                            <div class="col-12 d-flex justify-content-center">
+                                <button (click)="editarHabilidad(skillActual)" type="submit" class="btn btn-dark me-2" name="editButton" id="editButton">
                                     Modificar
                                 </button>
                                 <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">

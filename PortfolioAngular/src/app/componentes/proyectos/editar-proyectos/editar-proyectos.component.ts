@@ -18,6 +18,9 @@ export class EditarProyectosComponent {
 
   proyectoActual: Proyecto = {
     nombre_proyecto: "",
+    fecha_creacion: "",
+    descripcion: "",
+    url_imagen: "",
     url_repositorio: "",
     url_proyecto: "",
     persona_id: 1 };

@@ -9,7 +9,7 @@
     
     <div class="container d-flex justify-content-center align-items-center">
         <div class="col-sm-12 col-md-8 mb-3">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-body px-4 py-4">
 
                     <!--Formulario-->                
@@ -18,40 +18,40 @@
                             <label for="nombre_puesto" class="col-form-label fw-bold">
                                 Nombre del puesto
                             </label>
-                            <input type="text" class="form-control" id="nombre_puesto" name="nombre_puesto" [(ngModel)]="trabajoActual.nombre_puesto">                  
+                            <input type="text" class="form-control" id="nombre_puesto" name="nombre_puesto" [(ngModel)]="trabajoActual.nombre_puesto" placeholder="Nombre del puesto ejercido">                  
                         </div>
 
                         <div class="form-group col-12">
                             <label for="nombre_empresa" class="col-form-label fw-bold">
                                 Nombre de la empresa
                             </label>
-                            <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa" [(ngModel)]="trabajoActual.nombre_empresa">                  
+                            <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa" [(ngModel)]="trabajoActual.nombre_empresa" placeholder="Nombre de la empresa">                  
                         </div>
     
                         <div class="form-group col-6">
                             <label for="fecha_inicio" class="col-form-label fw-bold">
                                 Fecha de inicio
                             </label>
-                            <input type="text" class="form-control" id="fecha_inicio" name="fecha_inicio" [(ngModel)]="trabajoActual.fecha_inicio">
+                            <input type="text" class="form-control" id="fecha_inicio" name="fecha_inicio" [(ngModel)]="trabajoActual.fecha_inicio" placeholder="Año">
                         </div>
 
                         <div class="form-group col-6">
                             <label for="fecha_fin" class="col-form-label fw-bold">
                                 Fecha de fin
                             </label>
-                            <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="trabajoActual.fecha_fin">
+                            <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="trabajoActual.fecha_fin" placeholder="Año">
                         </div>
   
                         <div class="form-group col-12">
                              <label for="descripcion" class="col-form-label fw-bold">
                                 Descripción del puesto
                             </label>
-                            <textarea class="form-control" id="descripcion" style="height: 100px" name="descripcion" [(ngModel)]="trabajoActual.descripcion"></textarea>
+                            <textarea class="form-control" id="descripcion" style="height: 100px" name="descripcion" [(ngModel)]="trabajoActual.descripcion" placeholder="Descripción de las tareas y responsabilidades del cargo"></textarea>
                         </div>
                               
                         <!--Boton Agregar-->
-                        <div class="col-9 offset" *ngIf="!trabajoActual.id else elseBlock">
-                            <button (click)="agregarTrabajo()" type="button" class="btn btn-dark me-2" name="addButton" id="editButton">
+                        <div class="col-12 d-flex justify-content-center" *ngIf="!trabajoActual.id else elseBlock">
+                            <button (click)="agregarTrabajo()" type="button" class="btn btn-dark me-2" name="addButton" id="addButton">
                                 Agregar
                             </button>
                             <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
@@ -61,8 +61,8 @@
 
                         <!--Boton Modificar-->
                         <ng-template #elseBlock>
-                            <div class="col-9 offset">
-                                <button (click)="editarTrabajo(trabajoActual)" type="submit" class="btn btn-dark me-2" name="addButton" id="editButton">
+                            <div class="col-12 d-flex justify-content-center">
+                                <button (click)="editarTrabajo(trabajoActual)" type="submit" class="btn btn-dark me-2" name="editButton" id="editButton">
                                     Modificar
                                 </button>
                                 <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">

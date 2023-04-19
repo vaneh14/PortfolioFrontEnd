@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Proyecto } from 'src/app/modelo/Proyecto';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 
 @Component({

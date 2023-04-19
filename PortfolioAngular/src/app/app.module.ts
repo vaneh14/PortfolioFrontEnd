@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditarExperienciaComponent } from './componentes/experiencia/editar-experiencia/editar-experiencia.component';
 import { EditarProyectosComponent } from './componentes/proyectos/editar-proyectos/editar-proyectos.component';
 import { EditarHabilidadesComponent } from './componentes/habilidades/editar-habilidades/editar-habilidades.component';
+import { EditarPersonaComponent } from './componentes/acerca-de/editar-persona/editar-persona.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { EditarHabilidadesComponent } from './componentes/habilidades/editar-hab
     EditarEducacionComponent,
     EditarExperienciaComponent,
     EditarProyectosComponent,
-    EditarHabilidadesComponent
+    EditarHabilidadesComponent,
+    EditarPersonaComponent
   ],
   imports: [
     BrowserModule,

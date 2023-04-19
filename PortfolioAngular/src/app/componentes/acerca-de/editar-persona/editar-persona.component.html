@@ -1,0 +1,89 @@
+<section id="editarPersona" class="edit-section">
+
+    <!--Boton Volver Atras-->
+    <div class="position-absolute top-0 start-0">
+        <a class="nav-link" routerLink="/portfolio" id="volverAtras">
+            <i class="bi bi-arrow-left-circle"></i>            
+        </a>
+    </div>
+    
+    <div class="container d-flex row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-8 mb-3">
+            <div class="card shadow">
+                <div class="card-body px-4 py-4">
+
+                    <!--Formulario-->                
+                    <form class="row g-3" role="form" #formEditarPersona="ngForm">
+
+                        <div class="form-group col-6">
+                            <label for="nombre" class="col-form-label fw-bold">
+                                Nombre
+                            </label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="personaActual.nombre" placeholder="Nombre">
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="apellido" class="col-form-label fw-bold">
+                                Apellido
+                            </label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="personaActual.apellido" placeholder="Apellido">
+                        </div>
+  
+                        <div class="form-group col-12">
+                             <label for="sobre_mi" class="col-form-label fw-bold">
+                                Sobre mí
+                            </label>
+                            <textarea class="form-control" id="sobre_mi" style="height: 100px" name="sobre_mi" [(ngModel)]="personaActual.sobre_mi" placeholder="Descripción de la persona"></textarea>
+                        </div>
+  
+                        <div class="form-group col-12">
+                            <label for="url_imagen" class="col-form-label fw-bold">
+                                Url de la imagen
+                            </label>
+                            <input type="text" class="form-control" id="url_imagen" name="url_imagen" [(ngModel)]="personaActual.url_imagen" placeholder="Link de la imagen de perfil">
+                        </div>
+  
+                        <div class="form-group col-12">
+                            <label for="url_linkedin" class="col-form-label fw-bold">
+                                Url de LinkedIn
+                            </label>
+                            <input type="text" class="form-control" id="url_linkedin" name="url_linkedin" [(ngModel)]="personaActual.url_linkedin" placeholder="Link del perfil de LinkedIn">
+                        </div>
+
+                        <div class="form-group col-12">
+                            <label for="url_github" class="col-form-label fw-bold">
+                                Url de Github
+                            </label>
+                            <input type="text" class="form-control" id="url_github" name="url_github" [(ngModel)]="personaActual.url_github" placeholder="Link del perfil de Github">
+                        </div>
+    
+                        <!--Boton Agregar-->
+                        <div class="col-12 d-flex justify-content-center" *ngIf="!personaActual.id else elseBlock">
+                            <button (click)="agregarPersona()" type="button" class="btn btn-dark me-2" name="addButton" id="addButton">
+                                Agregar
+                            </button>
+                            <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
+                                Cancelar
+                            </button>
+                        </div>
+
+                        <!--Boton Modificar-->
+                        <ng-template #elseBlock>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button (click)="editarPersona(personaActual)" type="submit" class="btn btn-dark me-2" name="editButton" id="editButton">
+                                    Modificar
+                                </button>
+                                <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </ng-template>         
+                  
+                    </form> <!--Cierre Formulario-->
+
+                </div>
+            </div>
+        </div>
+    </div> <!--Cierre Container-->
+
+</section> 

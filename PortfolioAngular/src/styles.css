@@ -11,7 +11,8 @@
 
 
 
-/*--PORTFOLIO--*/
+/*-------------PORTFOLIO-------------*/
+
 /*--GENERALES--*/
 body{
     background-color: #f8f8f8;
@@ -37,7 +38,7 @@ section{
     margin-bottom: 20px;
 }
 
-html{
+html{ 
     scroll-behavior: smooth;
 }
 
@@ -52,6 +53,46 @@ html{
 
 .edicion-icon i:hover{
     color: #D47AE8;
+}
+
+
+/*--Botones de Formulario Editar--*/
+#cancelButton{
+    background-color: rgb(80, 80, 80);
+    border-color: rgb(80, 80, 80);
+}
+
+#cancelButton:hover{
+    background-color: rgb(36, 36, 36) !important;
+    border-color: rgb(36, 36, 36) !important;
+}
+
+#addButton{
+    background-color: #D47AE8;
+    border-color: #D47AE8;
+}
+
+#addButton:hover{
+    background-color: #b166c2 !important;
+    border-color: #b166c2 !important;
+}
+
+#editButton{
+    background-color: #D47AE8;
+    border-color: #D47AE8;
+}
+
+#editButton:hover{
+    background-color: #b166c2 !important;
+    border-color: #b166c2 !important;
+}
+
+
+/*--Boton Volver a Portfolio-*/
+#volverAtras{
+    font-size: 30px;
+    padding: 15px 20px;
+    color: black;
 }
 
 
@@ -155,6 +196,10 @@ html{
     color: white;
 }
 
+#edicion-icon i:hover{
+    color: #D47AE8;
+}
+
 
 
 /*--SECCION EDUCACION--*/
@@ -178,7 +223,6 @@ html{
     align-items: center;
     border-width: 0;
     border-radius: .5rem;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .05);
 }
 
 .card .btn{
@@ -201,13 +245,11 @@ html{
 }
 
 
-
 /*--Linea de tiempo--*/
 .block{
-    background-color: white;
+    background-color: white !important;
     border-width: 0;
     border-radius: .5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
     margin-bottom: 1.5rem
 }
 
@@ -341,6 +383,19 @@ html{
     }
 }
 
+/*--Iconos Modal--*/
+#link-icon a{
+    color: black;
+}
+
+#link-icon a:hover{
+    color: #D47AE8;
+}
+
+#link-icon i{
+    font-size: 20px;
+}
+
 
 
 /*--BOTON ARRIBA--*/
@@ -366,6 +421,70 @@ footer p{
 
 
 
+/*-------------EDITAR-------------*/
+
+/*--EDITAR PERSONA--*/
+#editarPersona{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    min-height: 600px;
+}
 
 
 
+/*--EDITAR EDUCACION--*/
+#editarEducacion{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    min-height: 600px;
+}
+
+
+
+/*--EDITAR HABILIDADES--*/
+#editarHabilidad{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    min-height: 600px;
+}
+
+
+
+/*--EDITAR EXPERIENCIA--*/
+#editarExperiencia{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    min-height: 600px;
+}
+
+
+
+/*--EDITAR PROYECTOS--*/
+#editarProyecto{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    min-height: 600px; 
+}
+
+
+
+/*-------------INICIAR SESION-------------*/
+#login{
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif; 
+    min-height: 600px;
+}
+
+#iconoLogin{
+    font-size: 60px ;
+}
+
+#ingresarButton{
+    background-color: #D47AE8;
+    border-color: #D47AE8;
+}
+
+#ingresarButton:hover{
+    background-color: #b166c2 !important;
+    border-color: #b166c2 !important;
+}

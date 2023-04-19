@@ -16,7 +16,7 @@ export class EducacionComponent {
  
   id: any;
  
-  constructor(private eduService:EducacionService, private toastr: ToastrService) {
+  constructor(private eduService: EducacionService, private toastr: ToastrService) {
     
     this.cursosList = new Array <Educacion>();
     
@@ -32,8 +32,7 @@ export class EducacionComponent {
   // Mostrar cursos //
   obtenerCursos(): void {
     this.eduService.getEducacion().subscribe(data =>{
-      this.cursosList = data;
-      
+      this.cursosList = data;      
     });
   }
 

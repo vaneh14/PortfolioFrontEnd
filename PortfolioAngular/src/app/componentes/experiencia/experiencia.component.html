@@ -7,22 +7,22 @@
         </div>
   
         <!--Linea de tiempo-->
-        <div class="container block pt-4 ps-5"> 
+        <div class="container block shadow pt-4 ps-5"> 
+
           <!--Botón Agregar-->
-          <span class="edicion-icon d-flex justify-content-end">
+          <span class="edicion-icon d-flex justify-content-end" id="edicion-icon">
             <a class="nav-link" routerLink="/agregar-experiencia"><i class="bi bi-plus-circle-fill"></i></a>
           </span>
           
-          <ul class="timeline-with-icons">
-  
-            <!--Trabajo-->
+          <!--Linea de Tiempo Trabajo-->
+          <ul class="timeline-with-icons">            
             <li class="timeline-item mb-5" *ngFor="let trabajo of trabajosList">
               <span class="timeline-icon mt-4">
                 <i class="bi bi-briefcase-fill"></i>
               </span>
 
               <!--Botones Editar y Eliminar-->
-              <span class="edicion-icon d-flex justify-content-end">
+              <span class="edicion-icon d-flex justify-content-end" id="edicion-icon">
                 <a href="#" routerLink="/editar-experiencia/{{trabajo.id}}"><i class="bi bi-pen-fill"></i></a>
                 <a (click)="borrarTrabajo(trabajo.id)" href="#"><i class="bi bi-trash3-fill"></i></a>
               </span>
