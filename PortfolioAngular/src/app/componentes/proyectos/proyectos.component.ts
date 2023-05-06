@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Proyecto } from 'src/app/modelo/Proyecto';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 
 @Component({
@@ -14,15 +15,26 @@ export class ProyectosComponent {
   proyectosList: Array <Proyecto>;
 
   id!: any;
+
+  //Variable esta logueado
+  isLogged = false;
     
-  constructor(private proyService: ProyectoService, private toastr: ToastrService) {
+  constructor(private proyService: ProyectoService, 
+              private toastr: ToastrService,
+              private authService: AutenticacionService) {
 
     this.proyectosList = new Array <Proyecto>();
 
   }
   
   ngOnInit(): void {
+
+    // Mostrar proyectos al cargar la página //
     this.obtenerProyectos();
+
+    // Esta logueado si se obtiene el token //
+    this.authService.token ? this.isLogged = true : this.isLogged = false;
+
   }
 
 

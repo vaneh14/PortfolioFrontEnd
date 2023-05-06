@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Persona } from 'src/app/modelo/Persona';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
@@ -14,8 +15,13 @@ export class AcercaDeComponent {
   personasList: Array <Persona>;
 
   id!: any;
+
+  //Variable esta logueado
+  isLogged = false;
   
-  constructor(private persService: PersonaService, private toastr: ToastrService) {
+  constructor(private persService: PersonaService, 
+              private toastr: ToastrService, 
+              private authService: AutenticacionService) {
 
     this.personasList = new Array <Persona>();
 
@@ -23,7 +29,11 @@ export class AcercaDeComponent {
   
   ngOnInit(): void {
 
+    // Mostrar personas al cargar la página //
     this.obtenerPersonas();
+
+    // Esta logueado si se obtiene el token //
+    this.authService.token ? this.isLogged = true : this.isLogged = false;
 
   }
 

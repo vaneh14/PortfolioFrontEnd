@@ -11,29 +11,29 @@ export class HabilidadService {
   constructor(private http:HttpClient) { }
 
   // API Back End //
-  Url = "http://localhost:8080/api/habilidad";
+  url: string = "http://localhost:8080/api/habilidad";
 
   // Crear nueva habilidad //
   createHabilidad(skill: Habilidad): Observable <any> {
-    return this.http.post<Habilidad>(`${this.Url}/new`, skill);
+    return this.http.post<Habilidad>(`${this.url}/new`, skill);
   }
 
   // Mostrar habilidades //
   getHabilidad(): Observable <any> {
-    return this.http.get<Habilidad[]>(this.Url);
+    return this.http.get<Habilidad[]>(this.url);
   }
 
   // Editar Habulidad //
   getHabilidadId(id: any): Observable <Habilidad> {
-    return this.http.get<Habilidad>(`${this.Url}/edit/${id}`);
+    return this.http.get<Habilidad>(`${this.url}/edit/${id}`);
   }
 
   updateHabilidad(skill: Habilidad): Observable <any> {
-    return this.http.put(`${this.Url}/edit/${skill.id}`, skill);
+    return this.http.put(`${this.url}/edit/${skill.id}`, skill);
   }
 
   // Borrar habilidad //
   deleteHabilidad(id: any): Observable <any> {
-    return this.http.delete(`${this.Url}/delete/${id}`);
+    return this.http.delete(`${this.url}/delete/${id}`);
   }
 }

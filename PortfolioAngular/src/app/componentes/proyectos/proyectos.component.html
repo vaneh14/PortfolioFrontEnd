@@ -9,7 +9,9 @@
 
       <!--Botón Agregar-->
       <span class="edicion-icon d-flex justify-content-end" id="edicion-icon">
-        <a class="nav-link" routerLink="/agregar-proyecto"><i class="bi bi-plus-circle-fill"></i></a>
+        <a class="nav-link" routerLink="/agregar-proyecto">
+          <i class="bi bi-plus-circle-fill" *ngIf="isLogged"></i>
+        </a>
       </span>
   
       <!--Galeria Proyectos-->
@@ -21,8 +23,12 @@
               
               <!--Botones Editar y Eliminar-->
               <span class="edicion-icon" id="edicion-icon">
-                <a href="#" routerLink="/editar-proyecto/{{proyecto.id}}"><i class="bi bi-pen-fill"></i></a>
-                <a (click)="borrarProyecto(proyecto.id)" href="#"><i class="bi bi-trash3-fill"></i></a>
+                <a href="#" routerLink="/editar-proyecto/{{proyecto.id}}">
+                  <i class="bi bi-pen-fill" *ngIf="isLogged"></i>
+                </a>
+                <a (click)="borrarProyecto(proyecto.id)" href="#">
+                  <i class="bi bi-trash3-fill" *ngIf="isLogged"></i>
+                </a>
               </span>
 
               <div class="proyecto">

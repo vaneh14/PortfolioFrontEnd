@@ -1,14 +1,15 @@
 export class Proyecto {
     id?: any;
-    nombre_proyecto: String;
-    fecha_creacion: String;
-    descripcion: String;
-    url_imagen: String;
-    url_repositorio: String;
-    url_proyecto: String;
+    nombre_proyecto: string;
+    fecha_creacion: string;
+    descripcion: string;
+    url_imagen: string;
+    url_repositorio: string;
+    url_proyecto: string;
     persona_id: number;
 
-    constructor (nombre_proyecto: String, fecha_creacion: String, descripcion: String, url_imagen: String, url_repositorio: String, url_proyecto: String, persona_id: number){
+    constructor (nombre_proyecto: string, fecha_creacion: string, descripcion: string, url_imagen: string, 
+                 url_repositorio: string, url_proyecto: string, persona_id: number){
         this.nombre_proyecto = nombre_proyecto;
         this.fecha_creacion = fecha_creacion;
         this.descripcion = descripcion;

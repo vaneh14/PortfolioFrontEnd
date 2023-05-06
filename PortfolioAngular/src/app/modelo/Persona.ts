@@ -1,13 +1,14 @@
 export class Persona {
     id?: any;
-    nombre: String;
-    apellido: String;
-    sobre_mi: String;
-    url_imagen: String;
-    url_linkedin: String;
-    url_github: String;
+    nombre: string;
+    apellido: string;
+    sobre_mi: string;
+    url_imagen: string;
+    url_linkedin: string;
+    url_github: string;
 
-    constructor (nombre: String, apellido: String, sobre_mi: String, url_imagen: String, url_linkedin: String, url_github: String){
+    constructor (nombre: string, apellido: string, sobre_mi: string, url_imagen: string, 
+                 url_linkedin: string, url_github: string){
         this.nombre = nombre;
         this.apellido = apellido;
         this. sobre_mi = sobre_mi;

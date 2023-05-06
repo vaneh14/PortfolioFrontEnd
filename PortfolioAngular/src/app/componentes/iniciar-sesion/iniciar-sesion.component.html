@@ -10,13 +10,13 @@
     <div class="d-flex justify-content-center align-items-center vh-100">
 
         <!--Formulario INICIAR SESION-->
-        <form [formGroup]="form" class="text-center" style="width: 18rem;">
+        <form [formGroup]="form" class="text-center" style="width: 18rem;" #formLogin="ngForm" (ngSubmit)="submitForm()">
             <i class="bi bi-person-circle mb-4" id="iconoLogin"></i>
             <h1 class="h4 fw-200 mb-3">Iniciar sesión</h1>
             
             <!--Email-->
             <div class="form-floating mb-3 text-secondary">
-                <input type="email" formControlName="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                <input type="email" formControlName="email" class="form-control" id="email" placeholder="name@example.com" name="email"
                 [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': Email?.errors && Email?.touched}">
                 <label for="floatingInput">Correo electrónico</label>
                 <div *ngIf="Email?.errors && Email?.touched" style="font-size: 0.9rem;">
@@ -31,7 +31,7 @@
 
             <!--Contraseña-->
             <div class="form-floating mb-3 text-secondary">
-                <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Contraseña"
+                <input type="password" formControlName="password" class="form-control" id="password" placeholder="Contraseña" name="password"
                 [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': Password?.errors && Password?.touched}">
                 <label for="floatingPassword">Contraseña</label>
                 <div *ngIf="Password?.errors && Password?.touched" style="font-size: 0.9rem;">

@@ -11,7 +11,7 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
@@ -28,6 +28,8 @@ import { EditarExperienciaComponent } from './componentes/experiencia/editar-exp
 import { EditarProyectosComponent } from './componentes/proyectos/editar-proyectos/editar-proyectos.component';
 import { EditarHabilidadesComponent } from './componentes/habilidades/editar-habilidades/editar-habilidades.component';
 import { EditarPersonaComponent } from './componentes/acerca-de/editar-persona/editar-persona.component';
+import { InterceptorService } from './servicios/interceptor.service';
+import { AutenticacionService } from './servicios/autenticacion.service';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { EditarPersonaComponent } from './componentes/acerca-de/editar-persona/e
     PersonaService,
     HabilidadService,
     ExperienciaService,
-    ProyectoService
+    ProyectoService,
+    AutenticacionService,
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

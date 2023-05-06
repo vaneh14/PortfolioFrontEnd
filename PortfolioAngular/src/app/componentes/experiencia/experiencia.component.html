@@ -11,20 +11,26 @@
 
           <!--Botón Agregar-->
           <span class="edicion-icon d-flex justify-content-end" id="edicion-icon">
-            <a class="nav-link" routerLink="/agregar-experiencia"><i class="bi bi-plus-circle-fill"></i></a>
+            <a class="nav-link" routerLink="/agregar-experiencia">
+              <i class="bi bi-plus-circle-fill" *ngIf="isLogged"></i>
+            </a>
           </span>
           
           <!--Linea de Tiempo Trabajo-->
           <ul class="timeline-with-icons">            
             <li class="timeline-item mb-5" *ngFor="let trabajo of trabajosList">
-              <span class="timeline-icon mt-4">
+              <span class="timeline-icon">
                 <i class="bi bi-briefcase-fill"></i>
               </span>
 
               <!--Botones Editar y Eliminar-->
               <span class="edicion-icon d-flex justify-content-end" id="edicion-icon">
-                <a href="#" routerLink="/editar-experiencia/{{trabajo.id}}"><i class="bi bi-pen-fill"></i></a>
-                <a (click)="borrarTrabajo(trabajo.id)" href="#"><i class="bi bi-trash3-fill"></i></a>
+                <a href="#" routerLink="/editar-experiencia/{{trabajo.id}}">
+                  <i class="bi bi-pen-fill" *ngIf="isLogged"></i>
+                </a>
+                <a (click)="borrarTrabajo(trabajo.id)" href="#">
+                  <i class="bi bi-trash3-fill" *ngIf="isLogged"></i>
+                </a>
               </span>
 
               <h5 class="timeline-title fw-bold">{{trabajo?.nombre_puesto}}</h5>
