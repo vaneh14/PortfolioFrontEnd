@@ -16,6 +16,9 @@ export class IniciarSesionComponent {
   // Variable esta logueado //
   isLogged = false;
 
+  // Variable mostrar login //
+  showLogin = true;
+
   constructor (private formBuilder:FormBuilder, 
                private authService: AutenticacionService, 
                private router: Router){
@@ -31,6 +34,7 @@ export class IniciarSesionComponent {
     // Esta logueado si se obtiene el token //
     if(this.authService.token) {
       this.isLogged = true;
+      this.showLogin = false;
     }
 
   }
@@ -44,7 +48,7 @@ export class IniciarSesionComponent {
   }
 
 
-  // Enviar formulario //
+  // Boton iniciar sesion //
   submitForm() {
     if (this.form.invalid) {
       return;
@@ -52,9 +56,17 @@ export class IniciarSesionComponent {
 
     this.authService.iniciarSesion(this.form.value).subscribe((data) => {
       this.isLogged = true;
+      this.showLogin = false;
       console.log("data:" + data);
       this.router.navigate(['/portfolio']);
     });
+  }
+
+
+  // Cerrar sesion //
+  logout() {
+    this.router.navigate(['/portfolio']);
+    this.authService.cerrarSesion();
   }
 
 }

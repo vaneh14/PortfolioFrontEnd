@@ -16,7 +16,7 @@ export class HabilidadesComponent {
 
   id!: any;
 
-  //Variable esta logueado
+  // Variable esta logueado //
   isLogged = false;
  
   constructor(private skillService: HabilidadService, 

@@ -22,10 +22,12 @@ export class HomeComponent {
 
   ngOnInit(): void {
 
+    // Mostrar personas al cargar la página //
     this.obtenerPersonas();
 
 
     // EFECTO TYPEWRITER //
+    // https://github.com/ChrisCavs/t-writer.js //
     const target = document.querySelector('.tw');
 
     const writer = new Typewriter(target, {

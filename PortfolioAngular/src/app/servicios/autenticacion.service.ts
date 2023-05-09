@@ -11,13 +11,18 @@ export class AutenticacionService {
   // API Back End //
   url: string = "http://localhost:8080/api/auth/authenticate";
 
-
   currentUserSubject: BehaviorSubject <any>;
 
   // Obtener token //
   get token() {
     return sessionStorage.getItem("token");
   }
+
+  // Variable esta logueado //
+  isLogged = false;
+
+  // Variable mostrar login //
+  showLogin = true;
 
   constructor(private http: HttpClient) {
 
@@ -37,5 +42,16 @@ export class AutenticacionService {
       return data;
     }))
    }
+
+
+   // Metodo cerrar sesion //
+   cerrarSesion() {
+    sessionStorage.removeItem('token');
+    sessionStorage.clear();
+    this.currentUserSubject.next('{}');
+    this.isLogged = false;
+    this.showLogin = true;
+    console.log("Sesion cerrada");
+  }
 
 }

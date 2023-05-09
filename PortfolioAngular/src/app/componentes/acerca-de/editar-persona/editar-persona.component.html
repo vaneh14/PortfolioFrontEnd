@@ -57,27 +57,15 @@
                             <input type="text" class="form-control" id="url_github" name="url_github" [(ngModel)]="personaActual.url_github" placeholder="Link del perfil de Github">
                         </div>
     
-                        <!--Boton Agregar-->
-                        <div class="col-12 d-flex justify-content-center" *ngIf="!personaActual.id else elseBlock">
-                            <button (click)="agregarPersona()" type="button" class="btn btn-dark me-2" name="addButton" id="addButton">
-                                Agregar
+                        <!--Boton Modificar-->
+                        <div class="col-12 d-flex justify-content-center">
+                            <button (click)="editarPersona(personaActual)" type="submit" class="btn btn-dark me-2" name="editButton" id="editButton">
+                                Modificar
                             </button>
                             <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
                                 Cancelar
                             </button>
-                        </div>
-
-                        <!--Boton Modificar-->
-                        <ng-template #elseBlock>
-                            <div class="col-12 d-flex justify-content-center">
-                                <button (click)="editarPersona(personaActual)" type="submit" class="btn btn-dark me-2" name="editButton" id="editButton">
-                                    Modificar
-                                </button>
-                                <button type="button" class="btn btn-secondary" routerLink="/portfolio" name="cancelButton" id="cancelButton">
-                                    Cancelar
-                                </button>
-                            </div>
-                        </ng-template>         
+                        </div>                               
                   
                     </form> <!--Cierre Formulario-->
 

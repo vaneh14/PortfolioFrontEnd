@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 import { Persona } from 'src/app/modelo/Persona';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
@@ -20,7 +19,6 @@ export class AcercaDeComponent {
   isLogged = false;
   
   constructor(private persService: PersonaService, 
-              private toastr: ToastrService, 
               private authService: AutenticacionService) {
 
     this.personasList = new Array <Persona>();
@@ -45,13 +43,5 @@ export class AcercaDeComponent {
     });
   }
 
-
-  // Borrar persona //
-  borrarPersona(id: any): void {
-    this.persService.deletePersona(id).subscribe(data =>{
-      this.toastr.success('Borrado con éxito!');
-      this.obtenerPersonas();      
-    });    
-  }
 
 }

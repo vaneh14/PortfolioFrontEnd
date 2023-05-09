@@ -36,16 +36,6 @@ export class EditarPersonaComponent {
     
   }
 
- 
-  // Crear persona //
-  agregarPersona(): void {    
-    this.persService.createPersona(this.personaActual).subscribe(data =>{
-      this.personasList.push(data);
-      this.toastr.success('Agregado con éxito!');
-      this.router.navigate(["/portfolio"]);
-    });
-  }
-
 
   // Editar persona //
   obtenerPersonaId(): void {

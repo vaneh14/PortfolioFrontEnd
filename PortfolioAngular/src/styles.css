@@ -114,9 +114,9 @@ html{
 
 
 
-/*--Icono Redes Sociales--*/
+/*--Icono Redes Sociales e Inicio/Cierre de Sesion--*/
 #menu .bi{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #menu .bi:hover{
@@ -337,12 +337,10 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-align: center;
  }
 
 .overlay p{
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 16px;
     margin-bottom: 0;
 }
 
@@ -364,7 +362,7 @@ html{
 
 .overlay i{
     color: black;
-    font-size: 30px;
+    font-size: 25px;
     margin: 15px;
 }
 
@@ -375,11 +373,11 @@ html{
 /*--MEDIA QUERY--*/
 @media screen and (max-width: 400px){
     .overlay p{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .overlay i{
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 

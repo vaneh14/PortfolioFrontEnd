@@ -13,7 +13,7 @@ export class PersonaService {
   // API Back End //
   url: string = "http://localhost:8080/api/persona";
 
-  // Crear nuevo persona //
+  // Crear nueva persona //
   createPersona(persona: Persona): Observable <any> {
     return this.http.post<Persona>(`${this.url}/new`, persona);
   }

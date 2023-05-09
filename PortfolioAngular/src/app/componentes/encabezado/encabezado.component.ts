@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/modelo/Persona';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
@@ -11,15 +13,32 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 export class EncabezadoComponent {
 
   personasList: Array <Persona>;
+
+  // Variable esta logueado //
+  isLogged = false;
+
+  // Variable mostrar login //
+  showLogin = true;
   
-  constructor(private persService:PersonaService) {
+  constructor(private persService:PersonaService,
+              private authService: AutenticacionService,
+              private router: Router) {
 
     this.personasList = new Array <Persona>();
 
   }
   
   ngOnInit(): void {
+
+    // Mostrar personas al cargar la página //
     this.obtenerPersonas();
+
+    // Esta logueado si se obtiene el token //
+    this.authService.token ? this.isLogged = true : this.isLogged = false;
+
+    // Se muestra el login si no se obtiene el token //
+    this.authService.token ? this.showLogin = false : this.showLogin = true;
+
   }
 
 
@@ -56,4 +75,11 @@ export class EncabezadoComponent {
     document.getElementById("projects")?.scrollIntoView({behavior:"smooth"});
   }
   
+
+  // Cerrar sesion //
+  logout() {
+    this.router.navigate(['/portfolio']);
+    this.authService.cerrarSesion();
+  }
+
 }

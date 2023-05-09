@@ -5,16 +5,17 @@
     <nav id="menu" class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #f8f8f8;">
       <div class="container-fluid">
   
-      <!--Logo Argentina Programa-->
+        <!--Logo Argentina Programa-->
         <a class="navbar-brand" href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank" rel="noopener noreferrer">
           <img class="logotipo" src="/assets/img/Logo Arg Prog.png" alt="Logo Arg Prog">
         </a>
   
-      <!--Categorias de Botones-->
+        <!--Boton Hamburguer Menu-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         
+        <!--Scroll Secciones-->
         <div class="collapse navbar-collapse" id="navbarNav" *ngFor="let persona of personasList">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
@@ -50,9 +51,9 @@
           </ul>
           <hr class="text-black-50">
         
-        <!--Iconos Redes Sociales-->
-          <ul class="navbar-nav flex-row flex-wrap text-center">
-            <li class="nav-item col-4 col-lg-auto" id="iconos-barra">
+          <!--Iconos Redes Sociales e Inicio/Cierre de Sesion-->
+          <ul class="navbar-nav flex-row flex-wrap text-center" id="iconos-barra">
+            <li class="nav-item col-4 col-lg-auto">
               <a class="nav-link" href={{persona?.url_linkedin}} target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-linkedin"></i>
               </a>
@@ -62,9 +63,14 @@
                 <i class="bi bi-github"></i>
               </a>
             </li>
-            <li class="nav-item col-4 col-lg-auto">
+            <li class="nav-item col-4 col-lg-auto" *ngIf="showLogin">
               <a class="nav-link" routerLink="/iniciar-sesion">
                 <i class="bi bi-person-circle"></i>
+              </a>          
+            </li>
+            <li class="nav-item col-4 col-lg-auto" *ngIf="isLogged">
+              <a class="nav-link" href="" (click)="logout()">
+                <i class="bi bi-person-fill-x"></i>
               </a>          
             </li>
           </ul> 

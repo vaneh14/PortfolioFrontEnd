@@ -8,9 +8,9 @@
       </div>
 
       <!--Botón Agregar-->
-      <span class="edicion-icon d-flex justify-content-end" id="edicion-icon">
+      <span class="edicion-icon d-flex justify-content-end" id="edicion-icon" *ngIf="isLogged">
         <a class="nav-link" routerLink="/agregar-proyecto">
-          <i class="bi bi-plus-circle-fill" *ngIf="isLogged"></i>
+          <i class="bi bi-plus-circle-fill"></i>
         </a>
       </span>
   
@@ -22,22 +22,23 @@
             <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let proyecto of proyectosList">
               
               <!--Botones Editar y Eliminar-->
-              <span class="edicion-icon" id="edicion-icon">
+              <span class="edicion-icon" id="edicion-icon" *ngIf="isLogged">
                 <a href="#" routerLink="/editar-proyecto/{{proyecto.id}}">
-                  <i class="bi bi-pen-fill" *ngIf="isLogged"></i>
+                  <i class="bi bi-pencil-fill"></i>
                 </a>
                 <a (click)="borrarProyecto(proyecto.id)" href="#">
-                  <i class="bi bi-trash3-fill" *ngIf="isLogged"></i>
+                  <i class="bi bi-trash3-fill"></i>
                 </a>
               </span>
 
               <div class="proyecto">
                 <img [src]="proyecto?.url_imagen" alt="Imagen de proyecto">
-                <div class="overlay">
-                  <p>{{proyecto?.nombre_proyecto}}</p>
-                  <div class="iconos-contenedor">
+                <div class="overlay col-10 me-3">
+                  <h5 class="fw-bold">{{proyecto?.nombre_proyecto}}</h5>
+                  <p class="text-muted">{{proyecto?.descripcion}}</p>
+                  <div class="iconos-contenedor justify-content-center mt-3">
                     <a href="{{proyecto?.url_repositorio}}" target="_blank" rel="noopener noreferrer">
-                      <i class="bi bi-link"></i>
+                      <i class="bi bi-github"></i>
                     </a>
                     <a href="{{proyecto?.url_proyecto}}" target="_blank" rel="noopener noreferrer">
                       <i class="bi bi-zoom-in"></i>
@@ -45,18 +46,7 @@
                   </div>
                 </div> 
               </div>
-
-              <!--Boton Saber Mas-->
-              <a data-bs-toggle="collapse" href="#detalleProyecto" role="button" aria-expanded="false" aria-controls="detalleProyecto">
-                Saber más
-              </a>
-              <div class="collapse multi-collapse" id="detalleProyecto">
-                <div class="card card-body">
-                  <p class="card-text text-muted fw-bold">{{proyecto?.fecha_creacion}}</p>
-                  <p class="card-text text-muted">{{proyecto?.descripcion}}</p>
-                </div>
-              </div>
-                            
+                                          
             </div> <!--Cierre Proyecto-->
           </div> <!--Cierre Fila-->
      
