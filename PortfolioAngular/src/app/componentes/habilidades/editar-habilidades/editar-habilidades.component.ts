@@ -19,6 +19,8 @@ export class EditarHabilidadesComponent {
   skillActual: Habilidad = {
     nombre_habilidad: "",
     porcentaje: "",
+    url_logo: "",
+    tipo: "",
     persona_id: 1 };
   
   constructor(private skillService: HabilidadService, private router: Router, private activatedRoute: ActivatedRoute, private toastr: ToastrService) {

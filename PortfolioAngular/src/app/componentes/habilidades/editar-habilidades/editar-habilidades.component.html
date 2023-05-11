@@ -28,6 +28,24 @@
                             </label>
                             <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skillActual.porcentaje" placeholder="Porcentaje de la habilidad adquirido">
                         </div>
+
+                        <div class="form-group col-12">
+                            <label for="url_logo" class="col-form-label fw-bold">
+                                Logo de la habilidad
+                            </label>
+                            <input type="text" class="form-control" id="url_logo" name="url_logo"[(ngModel)]="skillActual.url_logo" placeholder="Url del logo de la habilidad">
+                        </div>
+
+                        <div class="form-group col-12">
+                            <label for="tipo" class="col-form-label fw-bold">
+                                Categoría
+                            </label>
+                            <select class="form-select" aria-label="Default select example" id="tipo" name="tipo" [(ngModel)]="skillActual.tipo">
+                                <option value="HardSkill">Hard Skill</option>
+                                <option value="SoftSkill">Soft Skill</option>
+                                <option value="Herramienta">Herramienta</option>
+                            </select>
+                        </div>
     
                         <!--Boton Agregar-->
                         <div class="col-12 d-flex justify-content-center" *ngIf="!skillActual.id else elseBlock">

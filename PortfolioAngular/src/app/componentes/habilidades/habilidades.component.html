@@ -18,39 +18,144 @@
       </span>
 
 
-      <!--Tarjeya Habilidad-->
-      <div class="row justify-content-around">
-        <div class="col-sm-12 col-md-6 mb-3" *ngFor="let skill of skillsList" >
-          <div class="card mb-0 border-0 shadow-none">
-            
-              <div class="skill-box col-12" >
-                <div class="skill-title d-flex justify-content-between align-items-center">
-                  <p>{{skill?.nombre_habilidad}}</p>
-                  <p>{{skill?.porcentaje}}</p>
-                </div>
-    
-                <div class="progress">
-                  <div class="progress-bar" style="background-color: #D47AE8; width: {{skill?.porcentaje}}">
-                  </div>
-                </div>
-  
-                <!--Botones Editar y Eliminar-->
-                <span class="edicion-icon d-flex justify-content-end mt-1" id="edicion-icon" *ngIf="isLogged">
-                  <a href="#" routerLink="/editar-habilidad/{{skill.id}}">
-                    <i class="bi bi-pencil-fill"></i>
-                  </a>
-                  <a (click)="borrarHabilidad(skill.id)" href="#">
-                    <i class="bi bi-trash3-fill"></i>
-                  </a>
-                </span>             
-              
-            </div>
-          </div>      
+
+      <!--Pestañas-->
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-hardskill-tab" data-bs-toggle="tab" data-bs-target="#nav-hardskill" type="button" role="tab" aria-controls="nav-hardskill" aria-selected="true">
+            Hard Skills
+          </button>
+          <button class="nav-link" id="nav-herramienta-tab" data-bs-toggle="tab" data-bs-target="#nav-herramienta" type="button" role="tab" aria-controls="nav-herramienta" aria-selected="false">
+            Herramientas
+          </button>
+          <button class="nav-link" id="nav-softskill-tab" data-bs-toggle="tab" data-bs-target="#nav-softskill" type="button" role="tab" aria-controls="nav-softskill" aria-selected="false">
+            Soft Skills  
+          </button>
         </div>
-  
-      </div> <!--Termina Fila-->             
+      </nav>
+
+      <!--Contenido-->
+      <div class="tab-content" id="nav-tabContent">
+
+        <!--Tarjeta Hard Skill-->
+        <div class="tab-pane fade show active" id="nav-hardskill" role="tabpanel" aria-labelledby="nav-hardskill-tab">
+          
+          <div class="row justify-content-around">
+            <div class="col-sm-12 col-md-6 mb-3" *ngFor="let skill of skillsList" [ngSwitch]="skill.tipo" >
+              <div class="card mb-0 border-0 shadow-none" *ngSwitchCase="'HardSkill'">
+                
+                  <div class="skill-box col-12" >
+                    <div class="skill-title d-flex justify-content-between align-items-center">
+                      <div>
+                        <img class="iconoSkill pe-2" [src]="skill?.url_logo" alt="icono skill">
+                        {{skill?.nombre_habilidad}}
+                      </div>
+                      <p>{{skill?.porcentaje}}</p>
+                    </div>
         
+                    <div class="progress">
+                      <div class="progress-bar" [style.width]="skill?.porcentaje">
+                      </div>
+                    </div>
+      
+                    <!--Botones Editar y Eliminar-->
+                    <span class="edicion-icon d-flex justify-content-end mt-1" id="edicion-icon" *ngIf="isLogged">
+                      <a href="#" routerLink="/editar-habilidad/{{skill.id}}">
+                        <i class="bi bi-pencil-fill"></i>
+                      </a>
+                      <a (click)="borrarHabilidad(skill.id)" href="#">
+                        <i class="bi bi-trash3-fill"></i>
+                      </a>
+                    </span>             
+                  
+                </div>
+              </div>      
+            </div>
+      
+          </div> <!--Termina Tarjeta-->
+
+        </div>
+
+        <!--Tarjeta Herramienta-->
+        <div class="tab-pane fade" id="nav-herramienta" role="tabpanel" aria-labelledby="nav-herramienta-tab">
+          
+          <div class="row justify-content-around">
+            <div class="col-sm-12 col-md-6 mb-3" *ngFor="let skill of skillsList" [ngSwitch]="skill.tipo" >
+              <div class="card mb-0 border-0 shadow-none" *ngSwitchCase="'Herramienta'">
+                
+                  <div class="skill-box col-12" >
+                    <div class="skill-title d-flex justify-content-between align-items-center">
+                      <div>
+                        <img class="iconoSkill pe-2" [src]="skill?.url_logo" alt="icono skill">
+                        {{skill?.nombre_habilidad}}
+                      </div>
+                      <p>{{skill?.porcentaje}}</p>
+                    </div>
         
+                    <div class="progress">
+                      <div class="progress-bar" [style.width]="skill?.porcentaje">
+                      </div>
+                    </div>
+      
+                    <!--Botones Editar y Eliminar-->
+                    <span class="edicion-icon d-flex justify-content-end mt-1" id="edicion-icon" *ngIf="isLogged">
+                      <a href="#" routerLink="/editar-habilidad/{{skill.id}}">
+                        <i class="bi bi-pencil-fill"></i>
+                      </a>
+                      <a (click)="borrarHabilidad(skill.id)" href="#">
+                        <i class="bi bi-trash3-fill"></i>
+                      </a>
+                    </span>             
+                  
+                </div>
+              </div>      
+            </div>
+      
+          </div> <!--Termina Tarjeta-->
+
+        </div>
+
+        <!--Tarjeta Soft Skills-->
+        <div class="tab-pane fade" id="nav-softskill" role="tabpanel" aria-labelledby="nav-softskill-tab">
+          
+          <div class="row justify-content-around">
+            <div class="col-sm-12 col-md-6 mb-3" *ngFor="let skill of skillsList" [ngSwitch]="skill.tipo" >
+              <div class="card mb-0 border-0 shadow-none" *ngSwitchCase="'SoftSkill'">
+                
+                  <div class="skill-box col-12" >
+                    <div class="skill-title d-flex justify-content-between align-items-center">
+                      <div>
+                        <img class="iconoSkill pe-2" [src]="skill?.url_logo" alt="icono skill">
+                        {{skill?.nombre_habilidad}}
+                      </div>
+                      <p>{{skill?.porcentaje}}</p>
+                    </div>
+        
+                    <div class="progress">
+                      <div class="progress-bar" [style.width]="skill?.porcentaje">
+                      </div>
+                    </div>
+      
+                    <!--Botones Editar y Eliminar-->
+                    <span class="edicion-icon d-flex justify-content-end mt-1" id="edicion-icon" *ngIf="isLogged">
+                      <a href="#" routerLink="/editar-habilidad/{{skill.id}}">
+                        <i class="bi bi-pencil-fill"></i>
+                      </a>
+                      <a (click)="borrarHabilidad(skill.id)" href="#">
+                        <i class="bi bi-trash3-fill"></i>
+                      </a>
+                    </span>             
+                  
+                </div>
+              </div>      
+            </div>
+      
+          </div> <!--Termina Tarjeta-->
+        </div>
+          
+      </div> <!--Termina Contenido-->
+                
+            
     </div> <!--Cierre Container-->
 
   </section>

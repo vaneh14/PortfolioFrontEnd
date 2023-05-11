@@ -23,7 +23,7 @@ export class IniciarSesionComponent {
                private authService: AutenticacionService, 
                private router: Router){
     
-    // Formulario Iniciar Sesion //
+    // Construcción el formulario //
     this.form = this.formBuilder.group(
       {
         email:["", [Validators.required, Validators.email]],

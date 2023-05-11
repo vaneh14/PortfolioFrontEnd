@@ -306,6 +306,20 @@ html{
     padding-bottom: 0px;
 }
 
+.progress-bar{
+    background-color: #D47AE8 !important;
+}
+
+/*--nav-tab--*/
+#nav-tab .nav-link{
+    color: black;
+}
+
+.iconoSkill{
+    width: 28px;
+    margin-bottom: 2px;
+}
+
 
 
 /*--SECCION PROYECTOS--*/
