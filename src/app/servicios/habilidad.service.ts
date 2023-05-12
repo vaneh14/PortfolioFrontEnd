@@ -11,7 +11,7 @@ export class HabilidadService {
   constructor(private http:HttpClient) { }
 
   // API Back End //
-  url: string = "http://localhost:8080/api/habilidad";
+  url: string = "https://portfolio-backend-lvf9.onrender.com/api/habilidad";
 
   // Crear nueva habilidad //
   createHabilidad(skill: Habilidad): Observable <any> {

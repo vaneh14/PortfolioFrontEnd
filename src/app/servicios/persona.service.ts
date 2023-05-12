@@ -11,7 +11,7 @@ export class PersonaService {
   constructor(private http:HttpClient) { }
 
   // API Back End //
-  url: string = "http://localhost:8080/api/persona";
+  url: string = "https://portfolio-backend-lvf9.onrender.com/api/persona";
 
   // Crear nueva persona //
   createPersona(persona: Persona): Observable <any> {

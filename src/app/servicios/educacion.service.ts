@@ -12,7 +12,7 @@ export class EducacionService {
   constructor(private http:HttpClient) { }
 
   // API Back End //
-  url: string = "http://localhost:8080/api/educacion";
+  url: string = "https://portfolio-backend-lvf9.onrender.com/api/educacion";
 
   // Crear nuevo curso //
   createEducacion(curso: Educacion): Observable <any> {

@@ -11,7 +11,7 @@ export class ExperienciaService {
   constructor(private http:HttpClient) { }
 
   // API Back End //
-  url: string = "http://localhost:8080/api/experiencia-laboral";
+  url: string = "https://portfolio-backend-lvf9.onrender.com/api/experiencia-laboral";
 
   // Crear nuevo trabajo //
   createExperiencia(work: Experiencia): Observable <any> {
