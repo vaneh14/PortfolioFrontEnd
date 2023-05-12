@@ -4,7 +4,10 @@ Bienvenido al Repositorio Front End de mi Portfolio Web. El Repositorio Back End
 
 Esta aplicación forma parte del Proyecto Integrador de la segunda etapa de **Argentina Programa, #Yo Programo** y consiste en el desarrollo de una aplicación web de arquitectura distribuida del tipo SPA (Single Page Application). 
 
-<img width="800" src="./src/assets/img/PortfolioWeb.jpg" alt="Imagen portfolio web">
+<p align="center">
+   <img width="800" src="./src/assets/img/PortfolioWeb.jpg" alt="Imagen portfolio web">
+</p>
+
 
 ### Front End 
 
@@ -13,6 +16,7 @@ Creado con [Typescript](https://www.typescriptlang.org/) en [Angular CLI](https:
 <div>
    <img width="230" src="./src/assets/img/FrontEnd.png" alt="Logos Front End">   
 </div>
+
 
 ### Back End
 
