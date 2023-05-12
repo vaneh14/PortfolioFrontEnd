@@ -1,0 +1,233 @@
+{
+  "persona": [{
+    "id": 1,
+    "nombre": "Vanesa",
+    "apellido": "Huarte",
+    "sobre_mi": "Me llamo Vanesa, soy Arquitecta recibida de la FADU, UBA. Siempre me interesó el mundo de la informática y actualmente me encuentro cursando la segunda parte de Argentina Programa #Yo Programo.",
+    "url_imagen":"assets/img/img_perfil.png",
+    "url_linkedin":"https://www.linkedin.com/in/vanesa-huarte/",
+    "url_github":"https://github.com/vaneh14"
+  }],
+
+  
+  "educacion": [{
+    "id": 1,
+    "nombre_curso": "Argentina Programa #Sé Programar",
+    "fecha_inicio": "Junio de 2022",
+    "fecha_fin": "Agosto de 2022",
+    "descripcion": "Fundamentos básicos de la programación, programación imperativa, programación orientada a objetos.",
+    "lenguaje": "Gobstone, JavaScript, Ruby.",
+    "url_curso": "https://www.argentina.gob.ar/produccion/argentina-programa/primera-etapa",
+    "persona_id": 1
+    },
+  {
+    "id": 2,
+    "nombre_curso": "Argentina Programa #Yo Programo",
+    "fecha_inicio": "Octubre de 2022",
+    "fecha_fin": "Mayo de 2023",
+    "descripcion": "Introducción al desarrollo web, Front End estático y dinámico, Bases de Datos, POO, Back End con Springboot, DevOps.",
+    "lenguaje": "HTML, CSS, JS, BS, TS, Java, Angular, MySQL y SpringBoot.",
+    "url_curso": "https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa",
+    "persona_id": 1
+    },
+  {
+    "id": 3,
+    "nombre_curso": "Python - Ada",
+    "fecha_inicio": "Julio de 2022",
+    "fecha_fin": "Octubre de 2022",
+    "descripcion": "Fundamentos de la programación, sintaxis del lenguaje de programación Python, semántica y el entorno de tiempo de ejecución. Técnicas generales de codificación y programación orientada a objetos.",
+    "lenguaje": "Python",
+    "url_curso": "https://adaitw.org/cursos/",
+    "persona_id": 1
+    },
+  {
+    "id": 4,
+    "nombre_curso": "Diseño UX/UI - Ada",
+    "fecha_inicio": "Marzo de 2023",
+    "fecha_fin": "Mayo de 2023",
+    "descripcion": "Fundamentos básicos de experiencia de usuario e interfaces digitales, comprender el proceso y las distintas etapas para el desarrollo de un producto digital.",
+    "lenguaje": "Figma",
+    "url_curso": "https://adaitw.org/cursos/",
+    "persona_id": 1
+    }],
+
+
+  "habilidad": [{
+    "id": 1,
+    "nombre_habilidad": "HTML",
+    "porcentaje": "70%",
+    "url_logo": "/assets/img/html5.svg",
+    "tipo": "HardSkill",
+    "persona_id": 1
+    }, 
+  {
+    "id": 2,
+    "nombre_habilidad": "CSS",
+    "porcentaje": "60%",
+    "url_logo": "/assets/img/css3.svg",
+    "tipo": "HardSkill",
+    "persona_id": 1  
+    },
+  {
+    "id": 3,
+    "nombre_habilidad": "JavaScript",
+    "porcentaje": "40%",
+    "url_logo": "/assets/img/js.svg",
+    "tipo": "HardSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 4,
+    "nombre_habilidad": "Bootstrap",
+    "porcentaje": "70%",
+    "url_logo": "/assets/img/bootstrap.svg",
+    "tipo": "HardSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 5,
+    "nombre_habilidad": "Angular",
+    "porcentaje": "80%",
+    "url_logo": "/assets/img/angular.svg",
+    "tipo": "HardSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 6,
+    "nombre_habilidad": "Java",
+    "porcentaje": "40%",
+    "url_logo": "/assets/img/java.svg",
+    "tipo": "HardSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 7,
+    "nombre_habilidad": "Visual Studio Code",
+    "porcentaje": "80%",
+    "url_logo": "/assets/img/visual_studio_code.svg",
+    "tipo": "Herramienta",
+    "persona_id": 1
+    },
+  {
+    "id": 8,
+    "nombre_habilidad": "Apache NetBeans",
+    "porcentaje": "70%",
+    "url_logo": "/assets/img/apache_netbeans.svg",
+    "tipo": "Herramienta",
+    "persona_id": 1
+    },
+  {
+    "id": 9,
+    "nombre_habilidad": "MySQL Workbench",
+    "porcentaje": "60%",
+    "url_logo": "/assets/img/mysql.svg",
+    "tipo": "Herramienta",
+    "persona_id": 1
+    },
+  {
+    "id": 10,
+    "nombre_habilidad": "Postman",
+    "porcentaje": "80%",
+    "url_logo": "/assets/img/postman.svg",
+    "tipo": "Herramienta",
+    "persona_id": 1
+    },
+  {
+    "id": 11,
+    "nombre_habilidad": "Git Bash",
+    "porcentaje": "70%",
+    "url_logo": "/assets/img/gitbash.svg",
+    "tipo": "Herramienta",
+    "persona_id": 1
+    },
+  {
+    "id": 12,
+    "nombre_habilidad": "Trabajo en equipo",
+    "porcentaje": "100%",
+    "url_logo": "/assets/img/people_group.svg",
+    "tipo": "SoftSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 13,
+    "nombre_habilidad": "Fácil adaptación",
+    "porcentaje": "100%",
+    "url_logo": "/assets/img/puzzle_piece.svg",
+    "tipo": "SoftSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 14,
+    "nombre_habilidad": "Capacitación constante",
+    "porcentaje": "100%",
+    "url_logo": "/assets/img/laptop_code.svg",
+    "tipo": "SoftSkill",
+    "persona_id": 1
+    },
+  {
+    "id": 15,
+    "nombre_habilidad": "Proactividad",
+    "porcentaje": "100%",
+    "url_logo": "/assets/img/person_running.svg",
+    "tipo": "SoftSkill",
+    "persona_id": 1
+  }],
+
+
+  "experiencia_laboral": [{
+    "id": 1,
+    "nombre_puesto": "Profesional independiente",
+    "nombre_empresa": "Freelance",
+    "fecha_inicio": "Mayo de 2020",
+    "fecha_fin": "Actualidad",
+    "descripcion": "Dibujante técnico en Autocad 2D. Modelado 3D y visualización de imágenes en SketchUp y V-Ray. Post producción en Photoshop.",
+    "persona_id": 1
+    },
+  {
+    "id": 2,
+    "nombre_puesto": "Pasante",
+    "nombre_empresa": "Pasante",
+    "fecha_inicio": "Noviembre de 2018",
+    "fecha_fin": "Octubre de 2019",
+    "descripcion": "Relevamiento y confección de planillas técnicas de establecimientos y edificios patrimoniales de AySA en CABA y el Área Metropolitana de Buenos Aires. Detección de patologías y estado de conservación para su futura restauración y puesta en valor.",
+    "persona_id": 1
+    }],
+
+
+  "proyecto": [{
+    "id": 1,
+    "nombre_proyecto": "Portfolio Web",
+    "descripcion": "Proyecto Integrador que consiste en el desarrollo de una aplicación web de arquitectura distribuida del tipo SPA.",
+    "url_imagen": "/assets/img/img_proyecto_portfolio.svg",
+    "url_repositorio": "https://github.com/vaneh14/PortfolioFrontEnd.git",
+    "url_proyecto": "",
+    "persona_id": 1
+    },
+  {
+    "id": 2,
+    "nombre_proyecto": "Próximamente",
+    "descripcion": "En construcción.",
+    "url_imagen": "/assets/img/img_proyecto.svg",
+    "url_repositorio": "",
+    "url_proyecto": "",
+    "persona_id": 1
+    },
+  {
+    "id": 2,
+    "nombre_proyecto": "Próximamente",
+    "descripcion": "En construcción.",
+    "url_imagen": "/assets/img/img_proyecto.svg",
+    "url_repositorio": "",
+    "url_proyecto": "",
+    "persona_id": 1
+    }],
+
+    
+  "usuario": [{
+    "id": 1,
+    "email": "vanehuarte@gmail.com",
+    "password": "portfolioweb"
+    }]
+}
+
+
