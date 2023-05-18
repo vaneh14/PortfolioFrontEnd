@@ -198,25 +198,25 @@
     "id": 1,
     "nombre_proyecto": "Portfolio Web",
     "descripcion": "Proyecto Integrador que consiste en el desarrollo de una aplicación web de arquitectura distribuida del tipo SPA.",
-    "url_imagen": "/assets/img/img_proyecto_portfolio.svg",
+    "url_imagen": "/assets/img/img_proyecto_portfolio.png",
     "url_repositorio": "https://github.com/vaneh14/PortfolioFrontEnd.git",
-    "url_proyecto": "",
+    "url_proyecto": "https://portfolio-vhuarte.web.app",
     "persona_id": 1
     },
   {
     "id": 2,
     "nombre_proyecto": "Próximamente",
     "descripcion": "En construcción.",
-    "url_imagen": "/assets/img/img_proyecto.svg",
+    "url_imagen": "assets/img/img_proyecto.jpg",
     "url_repositorio": "",
     "url_proyecto": "",
     "persona_id": 1
     },
   {
-    "id": 2,
+    "id": 3,
     "nombre_proyecto": "Próximamente",
     "descripcion": "En construcción.",
-    "url_imagen": "/assets/img/img_proyecto.svg",
+    "url_imagen": "assets/img/img_proyecto.jpg",
     "url_repositorio": "",
     "url_proyecto": "",
     "persona_id": 1
