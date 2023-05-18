@@ -205,9 +205,9 @@
     },
   {
     "id": 2,
-    "nombre_proyecto": "Próximamente",
-    "descripcion": "En construcción.",
-    "url_imagen": "assets/img/img_proyecto.jpg",
+    "nombre_proyecto": "Piedra, papel o tijera",
+    "descripcion": "Juego interactivo realizado en workshop.",
+    "url_imagen": "/assets/img/FrontEnd.png",
     "url_repositorio": "",
     "url_proyecto": "",
     "persona_id": 1
